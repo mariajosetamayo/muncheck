@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Muncheck</title>
+		<!-- Meta Tags -->
+		<meta charset="utf-8"/>
+		<!-- Stylesheets -->
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,900italic' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Special+Elite"rel="stylesheet" type='text/css'>
+		<link rel="stylesheet" href="css/reset_rtl.css" />
+		<link rel="stylesheet" href="css/text_rtl.css" />
+		<link rel="stylesheet" href="css/960_rtl.css" />
+		<link rel="stylesheet" href="css/style.css"/> 
+		<!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+	</head>
+	<body>
+		<div class="container_12" id="page1">
+			<div class="grid_12">
+				<header> <!--Header -->
+
+				<!-- Top Navigation -->
+					<nav> 
+						<ul class="clearfix">
+							<li><a class="what" href="#">How does it work?</a></li>
+						</ul>
+					</nav>
+			
+					<!-- Modal Information Box -->
+					<div class="overlay" id="modal">
+						<div class="information">
+							<h3>How do I start a food search and get reccomendations?</h3>
+							<div>
+								<p>Muncheck helps you find the nutritional information for a wide variety of food items</p>
+								<ul>
+									<li>1. I pick a <strong>random secret number</strong> between 1 to 100 and keep it hidden.</li>
+									<li>2. You need to <strong>guess</strong> until you can find the hidden secret number.</li>
+									<li>3. You will <strong>get feedback</strong> on how close ("hot") or far ("cold") your guess is.</li>
+								</ul>
+								<p>So, Are you ready?</p>
+								<a class="close" href="#">Got It!</a>
+							</div>
+						</div>
+					</div>
+				</header>	
+			</div>
+			<div class="clear"></div>
+			<div class="grid_11">
+				<!-- logo text -->
+					<h1 class="title">Muncheck</h1>
+					<p class="text">What do you want to eat?</p>
+			</div>
+			<div class="clear"></div>
+			<div class="grid_11">
+				<section class="searchSection"> <!-- Guessing Section -->
+			
+					<form>
+						<textarea id="searchBox" placeholder="Type the name of a food item here. Ex. 1 apple" rows="10" cols="70" required></textarea>
+						<br/>
+						<button class="disease">I have diabetes</button>
+						<button class="disease">I have kidney disease</button>
+						<button class="disease">I want to loose weight</button>
+						<br/>
+      					<input type="checkbox" value="None" id="recipeCheck" name="check" checked/>
+      					<label for="recipeCheck">Are you checking a recipe?</label>
+      					<br/>
+      					<textarea id="portionBox" placeholder="1" rows="1" cols="1" required></textarea><span>How many portions does your recipe make?</span>
+    					
+    				</form>
+
+					
+            		<input type="submit" value="Check food item" id="submit"/>
+				</section>
+			</div>
+		</div>
+
+		<!-- page2 -->
+
+		<div class="container_12" id="page2">
+			<div class="grid_12 clearfix">
+				<header class="navBar"> <!--Header -->
+
+				<!-- Top Navigation -->
+					<nav> 
+						<ul class="clearfix">
+							<li><a id="searchAgain" href="#">Muncheck</a></li>
+						</ul>
+					</nav>
+				</header>
+			</div>
+			<div class="clear"></div>
+			<div class="grid_8">
+				<div class="resultsBox" id="results">
+					<img src="applePie.jpeg">
+				</div>
+			</div>
+			<div class="grid_4">
+				<div class="resultsBox" id="results2">
+					<h2 class="reccomendation">Not reccomended!</h2>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="grid_8">
+				<div class="foodItem" id="foodItem">
+					<p>Apple pie</p>
+				</div>
+			</div>
+			<div class="grid_4">
+				<div class="infoTag" id="infoTag">
+					<img src="nutritionalInfoTag.jpg">
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="grid_8">
+				<div class="micronutrients" id="micronutrientsResults">
+					<ul class="listOfMicronutrients">
+						<li>Iron ... 2500mg</li>
+					</ul>
+				</div>
+				<button class="micronutrientsBtn">See more micro-nutrients</button>
+			</div>
+		</div>
+		<!-- JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+	</body>
+</html>
