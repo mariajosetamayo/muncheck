@@ -105,8 +105,8 @@ nav a {
 .overlay {
 	width: 100%;
 	height: 100%;
-	color: black;
-	background: #e74c3c;
+	color: white;
+	background: white;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -115,9 +115,9 @@ nav a {
 	display: none;
 }
 
-.content {
+.information {
 	color: #fff;
-	background: #e74c3c;
+	background: #C9DF8A;
 	position: relative;
 	height: auto;
 	width: 600px;
@@ -127,7 +127,7 @@ nav a {
 	border: 1px solid rgba(0,0,0,0.1);
 }
 
-.content h3 {
+.information h3 {
 	margin: 0;
 	padding: 0.4em;
 	text-align: center;
@@ -138,40 +138,40 @@ nav a {
 	border-radius: 3px 3px 0 0;
 }
 
-.content > div {
+.information > div {
 	padding: 15px 40px 30px;
 	margin: 0;
 	font-weight: 300;
 	font-size: 1.15em;
 }
 
-.content > div p {
+.information > div p {
 	margin: 0;
 	padding: 10px 0;
 	line-height: 2em;
 	text-align: justify;
 }
 
-.content > div ul {
+.information > div ul {
 	margin-bottom: -30px;
 	padding: 0 0 30px 20px;
 	text-align: left;
 }
 
-.content > div ul li {
+.information > div ul li {
 	padding: 5px 0;
 	display: block;	
 	list-style-type: disc;
 	line-height: 1.5em;
 }
 
-.content > div ul li strong{
+.information > div ul li strong{
 	text-decoration: underline;
 }
 
-.content > div a {
+.information > div a {
 	font-size: 0.8em;
-	background: #1F253D;
+	background: white;
 	color: #95a5a6;
 	padding: 0.5em 2em;
 	margin-bottom: 50px;
@@ -256,9 +256,16 @@ span{
 /*---------------------------------------------------------------------------------
    Results Section Styles in Page 2
 ---------------------------------------------------------------------------------*/
+.navBar{
+	background-color: rgba(40, 113, 99, 0.2);
+	height: 70px;
+	width: 100%;
+	position: fixed;
+}
+
 #searchAgain{
 	font-size: 30px;
-	margin-left: -16%;
+	margin: auto;
 }
 
 
@@ -267,13 +274,14 @@ span{
 }
 .resultsBox{
 	/*background-color: white;*/
-	margin-top: 16%;
+	margin-top: 14%;
 	height: 100px;
 }
 
 .reccomendation{
 	font-size: 50px;
 	color: red;
+	text-shadow: 1px 1px #ff0000;
 }
 
 #results{
@@ -283,12 +291,13 @@ span{
 #results img{
 	width: 85%;
 	border-radius: 5px;
-	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
+	margin-top: 21%;
 }
 
 #results2{
 	width: 180%;
-	margin-top: 23%;
+	margin-top: 55%;
 }
 
 .foodItem, .micronutrients{
@@ -297,15 +306,17 @@ span{
 	width: 50%;
 	margin-left: 52%;
 	border-radius: 5px;
-	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
 }
 
 .foodItem{
 	margin-top: 16%;
+	font-size: 20px;
 }
 
 .micronutrients{
 	margin-top: -18%;
+	font-size: 20px;
 }
 
 .infoTag{
@@ -314,17 +325,18 @@ span{
 
 .infoTag img{
 	border-radius: 5px;
-	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
 }
 
 .micronutrientsBtn{
 	margin-left: 58%;
     margin-top: 10px;
     display: inline-block;
-    width: 177px;
-    height: 46px;
+    width: 190px;
+    height: 48px;
     border-radius: 6px;
     font-size: 15px;
+    padding: inherit;
     font-family: 'Special Elite', cursive;
     background: #007030;
     color: #fff;
