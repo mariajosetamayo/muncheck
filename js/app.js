@@ -82,11 +82,10 @@ $(document).ready(function(){
   // Funcion que contiene el jQuery para mostrar en la pantalla. 
   // Esto es la separacion de concerns. En la de arriba se hace el query, en 
   // esta se muestra todo en pantalla.
-  		// var foodItemSearched = showFoodItemSearched(data, foods.food_item)
-  		// $("#foodItem").html(foodItemSearched)
-  		var result = $('.foodItem').clone();
-  		var foodEntered = result.find('.foodItem');
-		foodEntered.html('<p>Name:' + data.foods.food_name + '</p>');
+  		$("#foodPhoto").attr('src', data.foods[0].photo.thumb)
+  		$("#foodItem").append("<p>" + data.foods[0].food_name + "</p>")
+  		$("#micronutrientsResults").append("<ul>" + "<li>" + window.nutrientField[211].name + "</li>" + "<li>" + data.foods[0].full_nutrients[10].value + window.nutrientField[211].unit + "</li>" + "<li>" + window.nutrientField[306].name + "</li>" + "<li>" + data.foods[0].full_nutrients[20].value + window.nutrientField[306].unit + "</li>" + "</ul>") 
+  		
 	}
 
 	
