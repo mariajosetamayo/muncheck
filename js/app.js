@@ -44,8 +44,7 @@ $(document).ready(function(){
 	});
 	
 
-	function getFoodRequest(searchTerm){
-
+	// function getFoodRequest(searchTerm){
   // 		$.ajax({
   // 			async: true,
   // 			crossDomain: true,
@@ -70,15 +69,15 @@ $(document).ready(function(){
 		//   	"timezone": "US/Eastern"
 		// })
 
-		var settings = {
-		  	url: "https://trackapi.nutritionix.com/v2/natural/nutrients",
-		  	method: "POST",
-		  	headers: {
-		    	"content-type": "application/json",
-		    	"x-app-id": "c7faf842",
-		    	"x-app-key": "bc4a198b34d738f0f52d5f874775d99d",
-		  	},
-		  	data: "{\n\t\"query\":\"bigmac\",\n\t\"timezone\":\"US/Eastern\"\n}\n\n"
+		// var settings = {
+		//   	url: "https://trackapi.nutritionix.com/v2/natural/nutrients",
+		//   	method: "POST",
+		//   	headers: {
+		//     	"content-type": "application/json",
+		//     	"x-app-id": "c7faf842",
+		//     	"x-app-key": "bc4a198b34d738f0f52d5f874775d99d",
+		//   	},
+		//   	data: "{\n\t\"query\":\"bigmac\",\n\t\"timezone\":\"US/Eastern\"\n}\n\n"
 		 //  	data: {
 	 	// 		"query": "apple",
 	 	// 		"timezone": "US/Eastern",
@@ -86,12 +85,12 @@ $(document).ready(function(){
 			// error: function (err) {
 			// 	console.log(err)
 			// }
-		}
+		// }
 
-		$.ajax(settings).done(function (response) {
-		  	console.log(response);
-		});
-	}
+	// 	$.ajax(settings).done(function (response) {
+	// 	  	console.log(response);
+	// 	});
+	// }
 
 	
 });
