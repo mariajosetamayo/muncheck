@@ -57,11 +57,14 @@
 							</div>
 						</div>
 					</header>
-					
+				</div>	
 			
 			<!-- <div class="clear"></div> -->
+			<div class="container">
 				<div class="row">
-					<div class=".col-xs-2 .col-sm-2 .col-md-2 .col-xs-8 .col-sm-8 .col-md-8 .col-md-2 .col-sm-2 .col-xs-2" >
+					<div class="col-lg-11 text-center">
+					<!-- <div class=".col-xs-2 .col-sm-2 .col-md-2 .col-xs-8 .col-sm-8 .col-md-8 .col-md-2 .col-sm-2 .col-xs-2" > -->
+
 						<!-- logo text -->
 						<h1 class="title">Muncheck</h1>
 						<p class="text">What do you want to eat?</p>
@@ -79,14 +82,15 @@
 								<button class="disease" value="yesKidney" id="kidneyBtn">I have kidney disease</button>
 								<button class="disease" value="yesWeight" id="weightBtn">I want to lose weight</button>
 								<br/>
-      							<input type="checkbox" value="None" id="recipeCheck" name="check" checked/>
-      							<label for="recipeCheck">Are you checking a recipe?</label>
+								
+    						</form>
+    						 	<label for="recipeCheck">Are you checking a recipe?>
+      								<input type="checkbox" value="None" id="recipeCheck" name="check" checked/>
+      							</label>
+      							<!-- <label for="recipeCheck">Are you checking a recipe?</label> -->
       							<br/>
       							<textarea id="portionBox" placeholder="1" rows="1" cols="1" required></textarea><span>How many portions does your recipe make?</span>
-    					
-    					</form>
-
-					
+    						
             				<input type="submit" value="Check food item" id="submitBtn"/>
 						</section>
 					</div>
@@ -97,7 +101,7 @@
 
 		<!-- page2 -->
 		<div id="page2">
-			<div class="container-fluid">
+			<div class="container-fullwidth navBar">
 				<div class="row">
 					<div class=".col-md-12">
 			<!-- <div id="page2"> -->
@@ -111,9 +115,11 @@
 						</header>
 					</div>
 				</div>
+			</div>
 				<!-- <div class="container_12" > -->
 		
 				<!-- <div class="grid_8"> -->
+			<div class="container">
 				<div class="row">
 					<div class=".col-md-8">
 						<div class="resultsBox" id="results">
@@ -121,7 +127,7 @@
 						</div>
 					</div>
 				<!-- <div class="grid_4"> -->
-					<div class=".col-md-4">
+					<div class=".col-md-4 text-left">
 						<div class="resultsBox" id="results2">
 							<h2 class="reccomendation">Not reccomended!</h2>
 						</div>
@@ -132,11 +138,11 @@
 					<!-- <div class="grid_8"> -->
 					<div class=".col-md-8">
 						<div class="foodItem" id="foodItem">
-							<p>Apple pie</p>
+							<!-- <p>Apple pie</p> -->
 						</div>
 					</div>
 					<!-- <div class="grid_4"> -->
-					<div class=".col-md-4">
+					<div class=".col-md-4 text-left">
 						<div class="infoTag" id="infoTag">
 							<img src="nutritionalInfoTag.jpg">
 						</div>

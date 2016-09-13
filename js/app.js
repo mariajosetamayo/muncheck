@@ -30,7 +30,7 @@ $(document).ready(function(){
 
 	//<--* variables to obtain user input *-->
 
-	$('#submitBtn').click(function(event){
+	$("#submitBtn").click(function(event){
   		event.preventDefault();
   		var userFoodInput = document.getElementById("searchBox").value
   		var diabetes = document.getElementById("diabetesBtn").value
@@ -42,55 +42,52 @@ $(document).ready(function(){
 		console.log("sii", recipePortion)
   		getFoodRequest(userFoodInput)
 	});
-	
 
-	// function getFoodRequest(searchTerm){
-  // 		$.ajax({
-  // 			async: true,
-  // 			crossDomain: true,
-  //   		url: 'https://trackapi.nutritionix.com/v2/natural/nutrients',
-  //   		processData: false,
-  //   		method: 'POST',
-  //   		data: {
-	 // 			query: "apple",
-	 // 			timezone: "US/Eastern",
-		// 	},
-  //   		headers: {
-  //   			"content-type": "application/json",
-		//     	"x-app-id": "c7faf842",
-		//     	"x-app-key": "bc4a198b34d738f0f52d5f874775d99d",
-  //   		},
-		// }).done(function (response) {
-		// 	console.log(response)
-		// });
+	function getFoodRequest(searchTerm){
 
-		// var data = JSON.stringify({
-		//   	"query": searchTerm,
-		//   	"timezone": "US/Eastern"
-		// })
+		var searchTerm= searchTerm;
+		var data =   {
+ 			"query": searchTerm,
+  			"timezone": "US/Eastern"
+		}
 
-		// var settings = {
-		//   	url: "https://trackapi.nutritionix.com/v2/natural/nutrients",
-		//   	method: "POST",
-		//   	headers: {
-		//     	"content-type": "application/json",
-		//     	"x-app-id": "c7faf842",
-		//     	"x-app-key": "bc4a198b34d738f0f52d5f874775d99d",
-		//   	},
-		//   	data: "{\n\t\"query\":\"bigmac\",\n\t\"timezone\":\"US/Eastern\"\n}\n\n"
-		 //  	data: {
-	 	// 		"query": "apple",
-	 	// 		"timezone": "US/Eastern",
-			// },
-			// error: function (err) {
-			// 	console.log(err)
-			// }
-		// }
-
-	// 	$.ajax(settings).done(function (response) {
-	// 	  	console.log(response);
-	// 	});
-	// }
+		$.ajax({
+  			url: 'https://trackapi.nutritionix.com/v2/natural/nutrients',
+  			type: 'POST',
+  			data: JSON.stringify(data),
+  			headers: {
+    			"Content-Type" : "application/json",
+    			"x-app-id": "745718c2",  
+    			"x-app-key": "d629dae08b944df9629b91f8c1dca886",  
+  			},
+  			dataType: 'json',
+  			success: function (data) {
+    			// Este console.log te muestra el objeto que retornas
+    			console.info(data);
+    
+    			//Mostrar elemento en pantalla
+    			showNutritionalValue(data)
+    
+  			},
+  			error: function (request, status, error) {
+    			// Estos console.log te dan informacion del error.
+    			console.log(request.responseText);
+    			console.log(error);
+    			console.log(status);
+  			}
+		});
+	}
+  	
+  	function showNutritionalValue(data){
+  // Funcion que contiene el jQuery para mostrar en la pantalla. 
+  // Esto es la separacion de concerns. En la de arriba se hace el query, en 
+  // esta se muestra todo en pantalla.
+  		// var foodItemSearched = showFoodItemSearched(data, foods.food_item)
+  		// $("#foodItem").html(foodItemSearched)
+  		var result = $('.foodItem').clone();
+  		var foodEntered = result.find('.foodItem');
+		foodEntered.html('<p>Name:' + data.foods.food_name + '</p>');
+	}
 
 	
 });

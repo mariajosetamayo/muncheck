@@ -237,14 +237,14 @@ input {
 label{
 	display: inline-block;
 	bottom: 23%;
-    position: absolute;
-    /* margin-top: -23px; */
+    /*position: absolute;*/
+     /*margin-top: -23px; */
     /* top: 90px; */
     right: 39%;
     font-size: 16px;
 }
-input, #recipeCheckbox{
-	float: right;
+input{
+	position: fixed;
 }
 
 #portionBox{
@@ -329,8 +329,8 @@ span{
 }
 
 .infoTag{
-	margin-left: -40%;
-	margin-top: -23%;
+	margin-left: 12%;
+	margin-top: -19%;
 }
 
 .infoTag img{
