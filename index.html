@@ -45,7 +45,7 @@
 							<div class="information">
 								<h3>How do I start a food search and get reccomendations?</h3>
 								<div>
-									<p>Muncheck helps you find the nutritional information for a wide variety of food items</p>
+									<p>Muncheck helps you find the nutritional information for a wide variety of food items and get a reccomendation to know if it is a good food choice</p>
 									<ul>
 										<li>1. Write an item <strong></strong> </li>
 										<li>2. You need to <strong></strong> </li>
@@ -62,7 +62,7 @@
 			<!-- <div class="clear"></div> -->
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-11 text-center">
+					<div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 text-center">
 					<!-- <div class=".col-xs-2 .col-sm-2 .col-md-2 .col-xs-8 .col-sm-8 .col-md-8 .col-md-2 .col-sm-2 .col-xs-2" > -->
 
 						<!-- logo text -->
@@ -76,20 +76,20 @@
 						<section class="searchSection"> <!-- Guessing Section -->
 			
 							<form>
-								<textarea id="searchBox" placeholder="Type the name of a food item here. Ex. 1 apple" rows="10" cols="46" required></textarea>
+								<textarea id="searchBox" placeholder="Type the name of a food item here. Ex. 1 apple" rows="6" cols="46" required></textarea>
 								<br/>
-								<button class="disease" value="yesDiabetes" id="diabetesBtn">I have diabetes</button>
-								<button class="disease" value="yesKidney" id="kidneyBtn">I have kidney disease</button>
-								<button class="disease" value="yesWeight" id="weightBtn">I want to lose weight</button>
+								<button class="disease" value="yesDiabetes" id="hasDiabetes">I have diabetes</button>
+								<button class="disease" value="yesKidney" id="hasKidneyDisease">I have kidney disease</button>
+								<button class="disease" value="yesWeight" id="wantsToLoseWeight">I want to lose weight</button>
 								<br/>
 								
     						</form>
-    						 	<label for="recipeCheck">Are you checking a recipe?>
+    						 	<!-- <label for="recipeCheck">Are you checking a recipe?>
       								<input type="checkbox" value="None" id="recipeCheck" name="check" checked/>
       							</label>
-      							<!-- <label for="recipeCheck">Are you checking a recipe?</label> -->
+      							<label for="recipeCheck">Are you checking a recipe?</label>
       							<br/>
-      							<textarea id="portionBox" placeholder="1" rows="1" cols="1" required></textarea><span>How many portions does your recipe make?</span>
+      							<textarea id="portionBox" placeholder="1" rows="1" cols="1" required></textarea><span>How many portions does your recipe make?</span> -->
     						
             				<input type="submit" value="Check food item" id="submitBtn"/>
 						</section>
@@ -154,7 +154,7 @@
   								<table class="performance-facts__table">
     								<thead>
      	 								<tr>
-        									<th colspan="3" class="small-info" id="calories">
+        									<th colspan="3" class="small-info" id="serving">
           										Amount Per Serving
         									</th>
       									</tr>
@@ -165,69 +165,64 @@
           									<b>Calories</b>
         									</th>
         									<td>
-          										
+          										<b id="calories"></b>
         									</td>
       									</tr>
       									<tr class="thick-row">
-        									<td colspan="3" class="small-info">
+        									<!-- <td colspan="3" class="small-info">
           										<b>% Daily Value*</b>
         									</td>
       									</tr>
-     									 <tr>
+     									 <tr> -->
         									<th colspan="2">
           										<b>Total Fat</b>
-          										14g
         									</th>
         									<td>
-          										<b>22%</b>
+          										<b id="total_fat"></b>
         									</td>
       									</tr>
       									<tr>
        										<td class="blank-cell">
         									</td>
         									<th>
-          										Saturated Fat
-          										9g
+          										<b>Saturated Fat</b>
         									</th>
         									<td>
-          										<b>22%</b>
+          										<b id="saturated_fat"></b>
         									</td>
       									</tr>
-      									<tr>
+      									<!-- <tr>
         									<td class="blank-cell">
         									</td>
         									<th>
-          										Trans Fat
-          										0g
+          										<b>Trans Fat</b>
         									</th>
         									<td>
+        										<b id="trans_fat"></b>
         									</td>
-      									</tr>
+      									</tr> -->
       									<tr>
         									<th colspan="2">
           										<b>Cholesterol</b>
-          										55mg
         									</th>
         									<td>
-          										<b>18%</b>
+          										<b id="cholesterol"></b>
         									</td>
       									</tr>
       									<tr>
         									<th colspan="2">
           										<b>Sodium</b>
-          										40mg
         									</th>
         									<td>
-          										<b>2%</b>
+          										<b id="sodium"></b>
         									</td>
       									</tr>
       									<tr>
         									<th colspan="2">
           										<b>Total Carbohydrate</b>
-          										17g
         									</th>
         									<td>
-          										<b>6%</b>
+          										<b id="total_carbs"></b>
         									</td>
       									</tr>
       									<tr>
@@ -235,10 +230,9 @@
         									</td>
         									<th>
           										Dietary Fiber
-          										1g
         									</th>
         									<td>
-          										<b>4%</b>
+          										<b id="dietary_fiber"></b>
         									</td>
       									</tr>
       									<tr>
@@ -246,23 +240,23 @@
         									</td>
         									<th>
           										Sugars
-          										14g
         									</th>
         									<td>
+        										<b id="sugar"></b>
         									</td>
       									</tr>
       									<tr class="thick-end">
         									<th colspan="2">
           										<b>Protein</b>
-          										3g
         									</th>
         									<td>
+        										<b id="protein"></b>
         									</td>
       									</tr>
     								</tbody>
   								</table>
   
-  								<table class="performance-facts__table--grid">
+  								<!-- <table class="performance-facts__table--grid">
     								<tbody>
       									<tr>
         									<td colspan="2">
@@ -348,7 +342,7 @@
     								&bull;
     								Protein 4
   								</p>
-  
+   -->
 							</section>
 						</div>
 					</div>
@@ -362,7 +356,6 @@
 								<li>Iron ... 2500mg</li>
 							</ul> -->
 						</div>
-						<button class="micronutrientsBtn">More micro-nutrients</button>
 					</div>
 				</div>
 			</div>

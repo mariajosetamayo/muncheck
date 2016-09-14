@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+	var userPrefs = {
+		hasDiabetes: false,
+		hasKidneyDisease: false,
+		wantsToLoseWeight: false
+		//numberOfPortions
+	}
+	var allNutrientInfo = window.nutrientField;
+
 	//<--* function to change between page1 and page2 *-->
 
 	function show(shown, hidden) {
@@ -19,27 +27,29 @@ $(document).ready(function(){
 	//<--* show instructions information modal box *-->
 
 	$(".what").click(function(){
-    		$(".overlay").fadeIn(1000);
+    	$(".overlay").fadeIn(1000);
   	});
 
  	 // <--* Hide instructions information modal box *-->
   	
 	$("a.close").click(function(){
-  			$(".overlay").fadeOut(1000);
+  		$(".overlay").fadeOut(1000);
  	});
 
 	//<--* variables to obtain user input *-->
+
+	$(".disease").click(function(event){
+		event.preventDefault();
+		var selectedDisease = $(this).attr("id")// obtienes el id con jquery.
+		console.log("yeii", selectedDisease)
+		userPrefs[selectedDisease] =  true
+		console.log("noo", userPrefs)
+		// jQuery Para que se vea aplastado (pintarle verde).
+	})
 	
 	$("#submitBtn").click(function(event){
   		event.preventDefault();
   		var userFoodInput = document.getElementById("searchBox").value
-  		window.diabetes = document.getElementById("diabetesBtn").value
-  		var kidney = document.getElementById("kidneyBtn").value
-  		var weight = document.getElementById("weightBtn").value
-  		var checkRecipe = document.getElementById('recipeCheck').checked;
-  		var recipePortion = document.getElementById("portionBox").value
-		console.log("siii", userFoodInput)
-		console.log("sii", recipePortion)
   		getFoodRequest(userFoodInput)
   		
 	});
@@ -60,8 +70,8 @@ $(document).ready(function(){
   			data: JSON.stringify(data),
   			headers: {
     			"Content-Type" : "application/json",
-    			"x-app-id": "745718c2",  
-    			"x-app-key": "d629dae08b944df9629b91f8c1dca886",  
+    			"x-app-id": "c7faf842",  
+    			"x-app-key": "bc4a198b34d738f0f52d5f874775d99d",  
   			},
   			dataType: 'json',
   			success: function (data) {
@@ -70,7 +80,8 @@ $(document).ready(function(){
     
     			//Mostrar elemento en pantalla
     			showNutritionalValue(data)
-    			diabetesReccomendation(data)
+    			var isRecommended = isFoodRecommended(data);
+				showRecomendation(isRecommended);
   			},
   			error: function (request, status, error) {
     			// Estos console.log te dan informacion del error.
@@ -82,33 +93,80 @@ $(document).ready(function(){
 	}
   	
   	function showNutritionalValue(data){
-  // Funcion que contiene el jQuery para mostrar en la pantalla. 
-  // Esto es la separacion de concerns. En la de arriba se hace el query, en 
-  // esta se muestra todo en pantalla.
-  		$("#foodPhoto").attr('src', data.foods[0].photo.thumb)
-  		$("#foodItem").append("<p>" + data.foods[0].food_name + "</p>")
-  		$("#micronutrientsResults").append("<ul>" + "<li>" + window.nutrientField[211].name + "</li>" + "<li>" + data.foods[0].full_nutrients[10].value + window.nutrientField[211].unit + "</li>" + "<li>" + window.nutrientField[306].name + "</li>" + "<li>" + data.foods[0].full_nutrients[20].value + window.nutrientField[306].unit + "</li>" + "</ul>")
-  		$(".performance-facts__title").append("<p>" + data.foods[0].serving_unit + "</p>" + "<p>" + data.foods[0].serving_weight_grams + "grams" + "</p>")
-		
+  // Funcion que contiene el jQuery para mostrar en la pantalla.
+		// Esto es la separacion de concerns. En la de arriba se hace el query, en
+		// esta se muestra todo en pantalla.
+		$("#foodPhoto").attr('src', data.foods[0].photo.thumb)
+		$("#foodItem").append("<p>" + data.foods[0].food_name + "</p>")
+
+		for (var i=0; i< data.foods[0].full_nutrients.length; i++){
+			var nutrient = data.foods[0].full_nutrients[i];
+			var nutrientID = nutrient.attr_id;
+			// console.log(nutrientID); te imprime toodos los ides de los full_nutrients, un opor uno.
+			var name = window.nutrientField[nutrientID].name;
+
+			$("#micronutrientsResults").append(
+				"<li>" + name + ": " + nutrient.value + " " + window.nutrientField[nutrientID].unit + "</li>")
+		}
+
+		$(".performance-facts__title").append("<p>" + data.foods[0].serving_weight_grams + " grams" + "</p>")
+		$("#calories").text(data.foods[0].nf_calories + " Kcal")
+		$("#total_fat").text(data.foods[0].nf_total_fat + " g");
+		$("#saturated_fat").text(data.foods[0].nf_saturated_fat + " g");
+		$("#cholesterol").text(data.foods[0].nf_cholesterol + "mg");
+		$("#sodium").text(data.foods[0].nf_sodium + " mg");
+		$("#total_carbs").text(data.foods[0].nf_total_carbohydrate + " g");
+		$("#dietary_fiber").text(data.foods[0].nf_dietary_fiber + " g");
+		$("#sugar").text(data.foods[0].nf_sugars + " g");
+		$("#protein").text(data.foods[0].nf_protein + " g");
+	
+	}
+
+	function isFoodRecommended(data){
+		var isRecommended = true;
+		console.log ("yeii", isRecommended)
+		for (var i=0; i< data.foods[0].full_nutrients.length; i++){
+			var nutrient = data.foods[0].full_nutrients[i];
+			var nutrientID = nutrient.attr_id;
+			// console.log(nutrientID); te imprime toodos los ides de los full_nutrients, un opor uno.
+			if(nutrientID === 305){
+			 	var phosphorus = nutrient.value;
+				console.log(phosphorus)
+			}
+			if(nutrientID === 605){
+			 	var transFat = nutrient.value;
+				console.log(phosphorus)
+			}
+		}
+
+		if (userPrefs.hasDiabetes){ // solo se ejecuta si el usuario selecciono ese boton en la primera pantalla.
+			if((data.foods[0].nf_total_carbohydrate>=30) || (data.foods[0].nf_saturated_fat>1) || (transFat>0)){
+				isRecommended = false;
+			}
+		}
+		if (userPrefs.hasKidneyDisease){
+			if((data.foods[0].nf_potassium>=200) || (phosphorus>= 150) || (data.foods[0].nf_sodium>=200)){
+				isRecommended = false;
+			}
+		}
+		if (userPrefs.wantsToLoseWeight){
+			if((data.foods[0].nf_calories> 200) || data.foods[0].nf_total_carbohydrate>60 || (data.foods[0].nf_saturated_fat>50) || (transFat>0) || (data.foods[0].serving_weight_grams<15 && data.foods[0].nf_calories> 30)){
+				isRecommended = false;
+			}
+		}
+		return isRecommended;
+	}
+
+	function showRecomendation(isRecommended){
+		if (isRecommended){
+			//Pintar de verde el div
+			$("#results2").append("<h2> Recommended </h2>")
+		} else  {
+			// Aparezca texto "Not Rec"
+			$("#results2").append("<h2> Not Recommended </h2>")
+			//Pintarle de rojo al texto.
+		}
 	}
 	
-	function diabetesReccomendation(data){	
-		if((data.foods[0].nf_total_carbohydrate>30) && (data.foods[0].nf_saturated_fat>1)) {
-			data.foods["recommendation"] = "Not recommended"
-		}
-		else{
-			
-			data.foods["recommedation"] = "Recommended"
-		}
-		$("#diabetesBtn").click(function(event){
-			event.preventDefault
-			$("results2").append("<h2>" + data.foods[0].recommedation + "</h2>")
-		})
-	}
-
-	
-
-
-
 	
 });
