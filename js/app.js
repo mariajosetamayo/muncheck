@@ -29,11 +29,11 @@ $(document).ready(function(){
  	});
 
 	//<--* variables to obtain user input *-->
-
+	
 	$("#submitBtn").click(function(event){
   		event.preventDefault();
   		var userFoodInput = document.getElementById("searchBox").value
-  		var diabetes = document.getElementById("diabetesBtn").value
+  		window.diabetes = document.getElementById("diabetesBtn").value
   		var kidney = document.getElementById("kidneyBtn").value
   		var weight = document.getElementById("weightBtn").value
   		var checkRecipe = document.getElementById('recipeCheck').checked;
@@ -41,7 +41,10 @@ $(document).ready(function(){
 		console.log("siii", userFoodInput)
 		console.log("sii", recipePortion)
   		getFoodRequest(userFoodInput)
+  		
 	});
+
+	
 
 	function getFoodRequest(searchTerm){
 
@@ -67,7 +70,7 @@ $(document).ready(function(){
     
     			//Mostrar elemento en pantalla
     			showNutritionalValue(data)
-    
+    			diabetesReccomendation(data)
   			},
   			error: function (request, status, error) {
     			// Estos console.log te dan informacion del error.
@@ -84,9 +87,28 @@ $(document).ready(function(){
   // esta se muestra todo en pantalla.
   		$("#foodPhoto").attr('src', data.foods[0].photo.thumb)
   		$("#foodItem").append("<p>" + data.foods[0].food_name + "</p>")
-  		$("#micronutrientsResults").append("<ul>" + "<li>" + window.nutrientField[211].name + "</li>" + "<li>" + data.foods[0].full_nutrients[10].value + window.nutrientField[211].unit + "</li>" + "<li>" + window.nutrientField[306].name + "</li>" + "<li>" + data.foods[0].full_nutrients[20].value + window.nutrientField[306].unit + "</li>" + "</ul>") 
-  		
+  		$("#micronutrientsResults").append("<ul>" + "<li>" + window.nutrientField[211].name + "</li>" + "<li>" + data.foods[0].full_nutrients[10].value + window.nutrientField[211].unit + "</li>" + "<li>" + window.nutrientField[306].name + "</li>" + "<li>" + data.foods[0].full_nutrients[20].value + window.nutrientField[306].unit + "</li>" + "</ul>")
+  		$(".performance-facts__title").append("<p>" + data.foods[0].serving_unit + "</p>" + "<p>" + data.foods[0].serving_weight_grams + "grams" + "</p>")
+		
 	}
+	
+	function diabetesReccomendation(data){	
+		if((data.foods[0].nf_total_carbohydrate>30) && (data.foods[0].nf_saturated_fat>1)) {
+			data.foods["recommendation"] = "Not recommended"
+		}
+		else{
+			
+			data.foods["recommedation"] = "Recommended"
+		}
+		$("#diabetesBtn").click(function(event){
+			event.preventDefault
+			$("results2").append("<h2>" + data.foods[0].recommedation + "</h2>")
+		})
+	}
+
+	
+
+
 
 	
 });
