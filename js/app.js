@@ -114,10 +114,15 @@ $(document).ready(function(){
 			var nutrient = data.foods[0].full_nutrients[i];
 			var nutrientID = nutrient.attr_id;
 			// console.log(nutrientID); te imprime toodos los ides de los full_nutrients, un opor uno.
-			var name = window.nutrientField[nutrientID].name;
-
-			$("#micronutrientsResults").append(
-				"<li>" + name + ": " + nutrient.value + " " + window.nutrientField[nutrientID].unit + "</li>")
+			// var name = (window.nutrientField[nutrientID]) ? window.nutrientField[nutrientID].name : '';
+			if (window.nutrientField[nutrientID]) {
+				var name = window.nutrientField[nutrientID].name;
+				if (nutrient.value !== 0) {
+					$("#micronutrientsResults").append(
+						"<li>" + name + ": " + nutrient.value + " " + window.nutrientField[nutrientID].unit + "</li>"
+					)
+				}
+			}
 		}
 
 		$(".performance-facts__title").text(data.foods[0].serving_weight_grams + " grams")
@@ -171,13 +176,15 @@ $(document).ready(function(){
 	function showRecomendation(isRecommended){
 		$("#results2").empty()
 		if (isRecommended){
-			document.getElementById("resultsContainer").style.backgroundColor = "lightblue";
-			// $(".resultsContainer").toggleClass("recommendedContainer")//Pintar de verde el div
+			// document.getElementById("resultsContainer").style.backgroundColor = "lightblue";
+			$(".resultsContainer").addClass("recommendedContainer")//Pintar de verde el div
+			$(".resultsContainer").removeClass("notRecommendedContainer")
 			$("#results2").append("<h2> Recommended!!! </h2>")
 		} else  {
 			// Aparezca texto "Not Rec"
 			$("#results2").append("<h2> Not Recommended!!! </h2>")
-			$(".resultsContainer").toggleClass("notRecommendedContainer")//Pintarle de rojo al texto.
+			$(".resultsContainer").addClass("notRecommendedContainer")//Pintarle de rojo al texto.
+			$(".resultsContainer").removeClass("recommendedContainer")
 		}
 	}
 	
