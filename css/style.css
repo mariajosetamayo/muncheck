@@ -81,11 +81,17 @@ nav ul li:last-child {
 	float: right;
 	list-style: none;
 
+
 }
 
 nav a {
 	text-decoration: none;
 	color: black;
+}
+
+nav a:hover{
+	color: #007030;
+	text-decoration: none;
 }
 
 .title {
@@ -110,8 +116,8 @@ nav a {
 .overlay {
 	width: 100%;
 	height: 100%;
-	color: white;
-	background: white;
+	color: black;
+	background: #F1F1F1;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -121,7 +127,7 @@ nav a {
 }
 
 .information {
-	color: #fff;
+	color: black;
 	background: #C9DF8A;
 	position: relative;
 	height: auto;
@@ -147,7 +153,8 @@ nav a {
 	padding: 15px 40px 30px;
 	margin: 0;
 	font-weight: 300;
-	font-size: 1.15em;
+	font-size: 1.18em;
+	height: 435px;
 }
 
 .information > div p {
@@ -175,13 +182,20 @@ nav a {
 }
 
 .information > div a {
-	font-size: 0.8em;
-	background: white;
+	font-size: 1.5em;
+	background: #007030;
 	color: #95a5a6;
 	padding: 0.5em 2em;
 	margin-bottom: 50px;
 	border-radius: 3px;
+	margin-right: 38%;
+	opacity: (0.8);
+
 }
+.close{
+
+}
+
 
 /*---------------------------------------------------------------------------------
    Search Section Styles in Page 1
@@ -214,7 +228,7 @@ input {
 	font-family: 'Special Elite', cursive;
 	font-size: 20px;
 	clear: both;
-	position: relative;
+	/*position: relative;*/
     right: 35%;
 }
 
@@ -234,18 +248,18 @@ input {
     border: solid #007030;
 }
 
-label{
+/*label{
 	display: inline-block;
-	bottom: 23%;
+	bottom: 23%;*/
     /*position: absolute;*/
      /*margin-top: -23px; */
     /* top: 90px; */
-    right: 39%;
+    /*right: 39%;
     font-size: 16px;
-}
-input{
+}*/
+/*input{
 	position: fixed;
-}
+}*/
 
 #portionBox{
 	position: relative;
@@ -258,6 +272,11 @@ input{
 span{
 	margin-left: 34%;
 	font-size: 16px;
+}
+
+.diseaseToggle{
+	background-color: #007030;
+	color:white; 
 }
 
 /*---------------------------------------------------------------------------------
@@ -280,6 +299,24 @@ span{
 #page2{
 	display: none;
 }
+
+.resultsContainer{
+	background-color: #F1F1F1;
+    height: 665px;
+    margin-top: 33px;
+    border-radius: 2px;
+}
+
+.recommendedContainer{
+	background-color: rgba(34, 112, 13,.8);
+	border-radius: 2px;
+}
+
+.notRecommendedContainer{
+	background-color: rgba(163, 5, 5, .8);
+	border-radius: 2px;
+}
+
 .resultsBox{
 	/*background-color: white;*/
 	margin-top: 14%;
@@ -297,7 +334,7 @@ span{
 }
 
 #results img{
-	width: 45%;
+	max-width: 143px;
 	border-radius: 5px;
 	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
 	margin-top: -5%;
@@ -305,7 +342,8 @@ span{
 
 #results2{
 	width: 68%;
-	margin-top: -12%;
+	margin-top: -16%;
+	color: white;
 
 }
 
@@ -324,14 +362,22 @@ span{
 }
 
 .micronutrients{
-	margin-top: -33%;
+	margin-top: -6%;
 	font-size: 20px;
 	overflow: scroll;
+	height:214px;
+}
+
+#results2 h2{
+	margin-left: 20%;
+}
+
+.foodItem p{
+	padding-top: 21px;
 }
 
 .infoTag{
-	margin-left: 12%;
-	margin-top: -19%;
+	margin-top: -22%;
 }
 
 .infoTag img{
@@ -363,6 +409,7 @@ p {
   border: 1px solid black;
   margin: 20px;
   float: left;
+  margin-left: 10%;
   width: 280px;
   padding: 0.5rem;
   background-color: white;
@@ -465,46 +512,37 @@ p {
    grid layout tests
 ---------------------------------------------------------------------------------*/
 
-.grid_3, .grid_4, .grid_11, .grid_12 {
-  float: left;
-
-  /* Gutters:
-   * Each column is padded by half-a-gutter on each side,
-   *
-   * Half a gutter is 10px, 10/960 (context) = 1.041666%
-   *
-   */
-  padding-left: 1.04166666%;
-  padding-right: 1.04166666%;
-}
-
-/* Mobile defaults */
-/*.grid_3, .grid_4, .grid_11, .grid_12  {*/
-  /*width: 100%;*/
-/*}*/
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
 
 
-/* Non-mobile, grid */
-/*@media only screen and (min-width: 640px) {*/
-  /* 3 columns, 3/12 in % */
-  /*.grid_3 {*/
-    /*width: 25%;*/
-  /*}*/
 
-  /* 4 columns */
-  /*.grid_4 {*/
-    /*width: 33.33%;*/
-  /*}*/
 
-  /* 6 columns */
-  /*.grid_6 {*/
-    /*width: 50%;*/
+    /*==========  Mobile First Method  ==========*/
 
-  }
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+        
+    }
 
-  /* 12 columns */
-  /*.grid_12 {*/
-    /*width: 100%;*/
-  /*}*/
-/*}*/
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }
 

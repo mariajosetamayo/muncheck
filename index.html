@@ -38,26 +38,28 @@
 						</nav>
 					</div>
 				</div>
-				<div class="row">
-					<div class=".col-xs-12 .col-sm-12 .col-md-12 .col-lg-12"></div>
-						<!-- Modal Information Box -->
-						<div class="overlay" id="modal">
-							<div class="information">
-								<h3>How do I start a food search and get reccomendations?</h3>
-								<div>
-									<p>Muncheck helps you find the nutritional information for a wide variety of food items and get a reccomendation to know if it is a good food choice</p>
-									<ul>
-										<li>1. Write an item <strong></strong> </li>
-										<li>2. You need to <strong></strong> </li>
-										<li>3. You will <strong>get feedback</strong> on your food query.</li>
-									</ul>
-									<p>So, Are you ready?</p>
-									<a class="close" href="#">Got It!</a>
-								</div>
-							</div>
-						</div>
-					</header>
-				</div>	
+        <div class="container">
+				  <div class="row">
+					 <div class=".col-xs-12 .col-sm-12 .col-md-12 .col-lg-12"></div>
+						  <!-- Modal Information Box -->
+						  <div class="overlay" id="modal">
+							 <div class="information">
+								  <h3>How do I start a food search and get food choice reccomendations?</h3>
+								  <div>
+									 <p>Muncheck is an easy way to find nutritional information and know if a food item is a healthy choice according to your health status.</p>
+                    <p>To start a search and find recommendations:</p>
+									 <ul>
+										  <li>1. Write a food item and the quantity in the text box of the main screen. </li>
+										  <li>2. Choose an option of your health status or fitness goal by clicking one of the buttons below your food search. You may choose more than one.</li>
+										  <li>3. Press the button below to check the food item and get a recommendation </li>
+									 </ul>
+									 <a class="close" href="#">Got It!</a>
+								  </div>
+							 </div>
+						  </div>
+					 </header>
+				  </div>
+        </div>	
 			
 			<!-- <div class="clear"></div> -->
 			<div class="container">
@@ -76,7 +78,7 @@
 						<section class="searchSection"> <!-- Guessing Section -->
 			
 							<form>
-								<textarea id="searchBox" placeholder="Type the name of a food item here. Ex. 1 apple" rows="6" cols="46" required></textarea>
+								<textarea id="searchBox" value="Clear" placeholder="Type the name of a food item here. Ex. 1 apple" rows="10" cols="46" required></textarea>
 								<br/>
 								<button class="disease" value="yesDiabetes" id="hasDiabetes">I have diabetes</button>
 								<button class="disease" value="yesKidney" id="hasKidneyDisease">I have kidney disease</button>
@@ -103,13 +105,13 @@
 		<div id="page2">
 			<div class="container-fullwidth navBar">
 				<div class="row">
-					<div class=".col-md-12">
+					<div class=".col-lg-12">
 			<!-- <div id="page2"> -->
 						<header class="navBar"> <!--Header -->
 						<!-- Top Navigation -->
 							<nav> 
 								<ul class="clearfix">
-									<li id="searchAgain"><a href="#">Muncheck</a></li>
+									<li id="searchAgain" class="logo"><a href="#">Muncheck</a></li>
 								</ul>
 							</nav>
 						</header>
@@ -120,6 +122,7 @@
 		
 				<!-- <div class="grid_8"> -->
 			<div class="container">
+        <div class="resultsContainer">
 				<div class="row">
 					<div class=".col-md-8">
 						<div class="resultsBox" id="results">
@@ -359,6 +362,7 @@
 					</div>
 				</div>
 			</div>
+      </div>
 		</div>
 		
 		<!-- JavaScript -->

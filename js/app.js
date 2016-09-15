@@ -21,6 +21,8 @@ $(document).ready(function(){
 	})
 
 	$("#searchAgain").click(function(){
+		$("#searchBox").val("")
+		$("#foodItem").val("")
 		return show("page1", "page2")
 	})
 
@@ -36,6 +38,12 @@ $(document).ready(function(){
   		$(".overlay").fadeOut(1000);
  	});
 
+ 	$(".logo").click(function(){
+ 		$("#searchBox").val("");
+ 	})
+
+
+
 	//<--* variables to obtain user input *-->
 
 	$(".disease").click(function(event){
@@ -44,7 +52,7 @@ $(document).ready(function(){
 		console.log("yeii", selectedDisease)
 		userPrefs[selectedDisease] =  true
 		console.log("noo", userPrefs)
-		// jQuery Para que se vea aplastado (pintarle verde).
+		$(this).toggleClass("diseaseToggle");// jQuery Para que se vea aplastado (pintarle verde).
 	})
 	
 	$("#submitBtn").click(function(event){
@@ -124,7 +132,7 @@ $(document).ready(function(){
 
 	function isFoodRecommended(data){
 		var isRecommended = true;
-		console.log ("yeii", isRecommended)
+		// console.log ("yeii", isRecommended)
 		for (var i=0; i< data.foods[0].full_nutrients.length; i++){
 			var nutrient = data.foods[0].full_nutrients[i];
 			var nutrientID = nutrient.attr_id;
@@ -140,7 +148,7 @@ $(document).ready(function(){
 		}
 
 		if (userPrefs.hasDiabetes){ // solo se ejecuta si el usuario selecciono ese boton en la primera pantalla.
-			if((data.foods[0].nf_total_carbohydrate>=30) || (data.foods[0].nf_saturated_fat>1) || (transFat>0)){
+			if((data.foods[0].nf_total_carbohydrate>=30) || (data.foods[0].nf_saturated_fat>1) || (transFat>0) || (data.foods[0].serving_weight_grams<15 && data.foods[0].nf_calories> 30)){
 				isRecommended = false;
 			}
 		}
@@ -159,12 +167,12 @@ $(document).ready(function(){
 
 	function showRecomendation(isRecommended){
 		if (isRecommended){
-			//Pintar de verde el div
-			$("#results2").append("<h2> Recommended </h2>")
+			$(".resultsContainer").toggleClass("recommendedContainer")//Pintar de verde el div
+			$("#results2").append("<h2> Recommended!!! </h2>")
 		} else  {
 			// Aparezca texto "Not Rec"
-			$("#results2").append("<h2> Not Recommended </h2>")
-			//Pintarle de rojo al texto.
+			$("#results2").append("<h2> Not Recommended!!! </h2>")
+			$(".resultsContainer").toggleClass("notRecommendedContainer")//Pintarle de rojo al texto.
 		}
 	}
 	
