@@ -79,8 +79,8 @@ $(document).ready(function(){
   			data: JSON.stringify(data),
   			headers: {
     			"Content-Type" : "application/json",
-    			"x-app-id": "c7faf842",  
-    			"x-app-key": "bc4a198b34d738f0f52d5f874775d99d",  
+    			"x-app-id": "745718c2",  
+    			"x-app-key": "d629dae08b944df9629b91f8c1dca886",  
   			},
   			dataType: 'json',
   			success: function (data) {
@@ -125,7 +125,7 @@ $(document).ready(function(){
 			}
 		}
 
-		$(".performance-facts__title").text(data.foods[0].serving_weight_grams + " grams")
+		$(".performance-facts__title").text("Nutrition Information       " + data.foods[0].serving_weight_grams + " grams")
 		$("#calories").text(data.foods[0].nf_calories + " Kcal")
 		$("#total_fat").text(data.foods[0].nf_total_fat + " g");
 		$("#saturated_fat").text(data.foods[0].nf_saturated_fat + " g");
