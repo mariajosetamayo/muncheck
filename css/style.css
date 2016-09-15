@@ -44,6 +44,11 @@ body {
 
 body { overflow-x: hidden;}
 
+/*.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}*/
+
 
 a {
 	text-decoration: none;
@@ -306,6 +311,9 @@ span{
 	float: left;
 }
 
+#page1 {
+	max-width: 100%;
+}
 
 #page2{
 	display: none;
@@ -533,27 +541,434 @@ p {
 
     /*==========  Mobile First Method  ==========*/
 
-    /* Custom, iPhone Retina */ 
-    @media only screen and (min-width : 320px) {
+    /* Extra Small Devices, Phones */ 
+    @media (min-width: 0px) and (max-width: 320px){
+    	#searchBox{
+    		width: 80%;
+    		margin-left: 36px;
+    		height: 100px;
+    		font-size: 14px;
+    		margin-top: -45px;
+    	}
+
+    	.navBar{
+    		height: 91px;
+    	}
+
+    	nav ul li{
+    		font-size: 20px;
+    	}
+
+    	.logo{
+    		margin-left: 38%;
+    		font-size: 24px;
+
+    	}
+
+    	.what{
+    		margin-right: 45px;
+    		font-size: 17px;
+    	}
+
+    	.title{
+    		display: none;
+    	}
+
+    	.text{
+    		font-size: 20px;
+    		margin-top: -27px;
+    		margin-left: 43px;
+    	}
+
+    	.disease{
+    		width: 114px;
+    		display: block;
+    		height: 44px;
+    		font-size: 12px;
+    		margin-left: 38%;
+    	}
+
+    	input{
+    		width: 190px;
+    		height: 56px;
+    		font-size: 20px;
+    		margin-left: 60px;
+    	}
+    }
+
+    @media (min-width : 321px) and (max-width: 411px) {
     	#searchBox{
     		width: 80%;
     		margin-left: 55px;
+    		height: 156px;
+    		margin-top: -47px;
+    	}
+
+    	.navBar{
+    		height: 88px;
+    	}
+
+    	nav ul li{
+    		font-size: 20px;
+    	}
+
+    	.logo{
+    		margin-left: 40%;
+    		font-size: 24px;
+
+    	}
+
+    	.what{
+    		margin-right: 80px;
+    		font-size: 17px;
+    	}
+
+    	.title{
+    		display: none;
+    	}
+
+    	.text{
+    		font-size: 20px;
+    		margin-top: -27px;
+    		margin-left: 43px;
+    	}
+
+    	.disease{
+    		width: 114px;
+    		display: block;
+    		height: 44px;
+    		font-size: 12px;
+    		margin-left: 38%;
+    	}
+
+    	input{
+    		width: 190px;
+    		height: 56px;
+    		font-size: 20px;
+    		margin-left: 60px;
     	}
         
     }
 
-    /* Extra Small Devices, Phones */ 
-    @media only screen and (min-width : 480px) {
+    @media (min-width : 412px) and (max-width: 415px){
+    	
     	#searchBox{
     		width: 80%;
     		margin-left: 55px;
+    		height: 156px;
+    		margin-top: -47px;
+    	}
+
+    	.navBar{
+    		height: 88px;
+    	}
+
+    	nav ul li{
+    		font-size: 20px;
+    	}
+
+    	.logo{
+    		margin-left: 48%;
+    		font-size: 24px;
+
+    	}
+
+    	.what{
+    		margin-right: 99px;
+    		font-size: 17px;
+    	}
+
+    	.title{
+    		display: none;
+    	}
+
+    	.text{
+    		font-size: 20px;
+    		margin-top: -27px;
+    		margin-left: 43px;
+    	}
+
+    	.disease{
+    		width: 114px;
+    		display: block;
+    		height: 44px;
+    		font-size: 12px;
+    		margin-left: 38%;
+    	}
+
+    	input{
+    		width: 190px;
+    		height: 56px;
+    		font-size: 20px;
+    		margin-left: 85px;
+    	}
+
+    }
+
+    @media (min-width : 417px) and (max-width: 437px){
+    	#searchBox{
+    		width: 80%;
+    		margin-left: 55px;
+    		height: 156px;
+    		margin-top: -47px;
+    	}
+
+    	.navBar{
+    		height: 88px;
+    	}
+
+    	nav ul li{
+    		font-size: 20px;
+    	}
+
+    	.logo{
+    		margin-left: 48%;
+    		font-size: 24px;
+
+    	}
+
+    	.what{
+    		margin-right: 99px;
+    		font-size: 17px;
+    	}
+
+    	.title{
+    		display: none;
+    	}
+
+    	.text{
+    		font-size: 20px;
+    		margin-top: -27px;
+    		margin-left: 43px;
+    	}
+
+    	.disease{
+    		width: 114px;
+    		display: block;
+    		height: 44px;
+    		font-size: 12px;
+    		margin-left: 38%;
+    	}
+
+    	input{
+    		width: 190px;
+    		height: 56px;
+    		font-size: 20px;
+    		margin-left: 85px;
     	}
     }
 
-    @media only screen and (min-width : 606px) {
+    @media (min-width : 438px) and (max-width: 447px){
     	#searchBox{
     		width: 80%;
     		margin-left: 55px;
+    		height: 156px;
+    		margin-top: -47px;
+    	}
+
+    	.navBar{
+    		height: 88px;
+    	}
+
+    	nav ul li{
+    		font-size: 20px;
+    	}
+
+    	.logo{
+    		margin-left: 50%;
+    		font-size: 24px;
+
+    	}
+
+    	.what{
+    		margin-right: 148px;
+    		font-size: 17px;
+    	}
+
+    	.title{
+    		display: none;
+    	}
+
+    	.text{
+    		font-size: 20px;
+    		margin-top: -27px;
+    		margin-left: 43px;
+    	}
+
+    	.disease{
+    		width: 114px;
+    		display: block;
+    		height: 44px;
+    		font-size: 12px;
+    		margin-left: 38%;
+    	}
+
+    	input{
+    		width: 190px;
+    		height: 56px;
+    		font-size: 20px;
+    		margin-left: 128px;
+    	}
+    }
+
+    @media (min-width : 448px) and (max-width: 526px){
+    	#searchBox{
+    		width: 80%;
+    		margin-left: 55px;
+    		height: 156px;
+    		margin-top: -47px;
+    	}
+
+    	.navBar{
+    		height: 88px;
+    	}
+
+    	nav ul li{
+    		font-size: 20px;
+    	}
+
+    	.logo{
+    		margin-left: 50%;
+    		font-size: 24px;
+
+    	}
+
+    	.what{
+    		margin-right: 112px;
+    		font-size: 17px;
+    	}
+
+    	.title{
+    		display: none;
+    	}
+
+    	.text{
+    		font-size: 20px;
+    		margin-top: -27px;
+    		margin-left: 43px;
+    	}
+
+    	.disease{
+    		width: 114px;
+    		display: block;
+    		height: 44px;
+    		font-size: 12px;
+    		margin-left: 38%;
+    	}
+
+    	input{
+    		width: 190px;
+    		height: 56px;
+    		font-size: 20px;
+    		margin-left: 104px;
+    	}
+    }
+
+    @media (min-width : 527px) and (max-width: 530px){
+    	#searchBox{
+    		width: 80%;
+    		margin-left: 55px;
+    		height: 156px;
+    		margin-top: -47px;
+    	}
+
+    	.navBar{
+    		height: 88px;
+    	}
+
+    	nav ul li{
+    		font-size: 20px;
+    	}
+
+    	.logo{
+    		margin-left: 58%;
+    		font-size: 24px;
+
+    	}
+
+    	.what{
+    		margin-right: 150
+    		px;
+    		font-size: 17px;
+    	}
+
+    	.title{
+    		display: none;
+    	}
+
+    	.text{
+    		font-size: 20px;
+    		margin-top: -27px;
+    		margin-left: 43px;
+    	}
+
+    	.disease{
+    		width: 114px;
+    		display: block;
+    		height: 44px;
+    		font-size: 12px;
+    		margin-left: 38%;
+    	}
+
+    	input{
+    		width: 190px;
+    		height: 56px;
+    		font-size: 20px;
+    		margin-left: 125px;
+    	}
+    }
+
+    @media (min-width : 530px) and (max-width: 550px){
+    	#searchBox{
+    		width: 80%;
+    		margin-left: 55px;
+    		height: 156px;
+    		margin-top: -47px;
+    	}
+
+    	.navBar{
+    		height: 88px;
+    	}
+
+    	nav ul li{
+    		font-size: 20px;
+    	}
+
+    	.logo{
+    		margin-left: 58%;
+    		font-size: 24px;
+
+    	}
+
+    	.what{
+    		margin-right: 150
+    		px;
+    		font-size: 17px;
+    	}
+
+    	.title{
+    		display: none;
+    	}
+
+    	.text{
+    		font-size: 20px;
+    		margin-top: -27px;
+    		margin-left: 43px;
+    	}
+
+    	.disease{
+    		width: 114px;
+    		display: block;
+    		height: 44px;
+    		font-size: 12px;
+    		margin-left: 38%;
+    	}
+
+    	input{
+    		width: 190px;
+    		height: 56px;
+    		font-size: 20px;
+    		margin-left: 125px;
     	}
     }
 
