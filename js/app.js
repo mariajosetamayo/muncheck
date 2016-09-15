@@ -22,7 +22,8 @@ $(document).ready(function(){
 
 	$("#searchAgain").click(function(){
 		$("#searchBox").val("")
-		$("#foodItem").val("")
+		userPrefs[window.selectedDisease] =  false
+		$(".disease").removeClass("diseaseToggle");
 		return show("page1", "page2")
 	})
 
@@ -48,9 +49,9 @@ $(document).ready(function(){
 
 	$(".disease").click(function(event){
 		event.preventDefault();
-		var selectedDisease = $(this).attr("id")// obtienes el id con jquery.
+		window.selectedDisease = $(this).attr("id")// obtienes el id con jquery.
 		console.log("yeii", selectedDisease)
-		userPrefs[selectedDisease] =  true
+		userPrefs[window.selectedDisease] =  true
 		console.log("noo", userPrefs)
 		$(this).toggleClass("diseaseToggle");// jQuery Para que se vea aplastado (pintarle verde).
 	})
@@ -104,8 +105,10 @@ $(document).ready(function(){
   // Funcion que contiene el jQuery para mostrar en la pantalla.
 		// Esto es la separacion de concerns. En la de arriba se hace el query, en
 		// esta se muestra todo en pantalla.
+		document.getElementById("foodItem").value = ""
+		document.getElementById("foodItem").value = ""
 		$("#foodPhoto").attr('src', data.foods[0].photo.thumb)
-		$("#foodItem").append("<p>" + data.foods[0].food_name + "</p>")
+		$("#foodItem").text(data.foods[0].food_name)
 
 		for (var i=0; i< data.foods[0].full_nutrients.length; i++){
 			var nutrient = data.foods[0].full_nutrients[i];
@@ -117,7 +120,7 @@ $(document).ready(function(){
 				"<li>" + name + ": " + nutrient.value + " " + window.nutrientField[nutrientID].unit + "</li>")
 		}
 
-		$(".performance-facts__title").append("<p>" + data.foods[0].serving_weight_grams + " grams" + "</p>")
+		$(".performance-facts__title").text(data.foods[0].serving_weight_grams + " grams")
 		$("#calories").text(data.foods[0].nf_calories + " Kcal")
 		$("#total_fat").text(data.foods[0].nf_total_fat + " g");
 		$("#saturated_fat").text(data.foods[0].nf_saturated_fat + " g");
@@ -166,8 +169,10 @@ $(document).ready(function(){
 	}
 
 	function showRecomendation(isRecommended){
+		$("#results2").empty()
 		if (isRecommended){
-			$(".resultsContainer").toggleClass("recommendedContainer")//Pintar de verde el div
+			document.getElementById("resultsContainer").style.backgroundColor = "lightblue";
+			// $(".resultsContainer").toggleClass("recommendedContainer")//Pintar de verde el div
 			$("#results2").append("<h2> Recommended!!! </h2>")
 		} else  {
 			// Aparezca texto "Not Rec"
