@@ -21,6 +21,9 @@ $(document).ready(function(){
 	})
 
 	$("#searchAgain").click(function(){
+		userPrefs.hasDiabetes = false
+		userPrefs.hasKidneyDisease = false
+		userPrefs.wantsToLoseWeight = false
 		$("#searchBox").val("")
 		userPrefs[window.selectedDisease] =  false
 		$(".disease").removeClass("diseaseToggle");
@@ -35,7 +38,7 @@ $(document).ready(function(){
 
  	 // <--* Hide instructions information modal box *-->
   	
-	$("a.close").click(function(){
+	$("#close").click(function(){
   		$(".overlay").fadeOut(1000);
  	});
 
@@ -79,8 +82,8 @@ $(document).ready(function(){
   			data: JSON.stringify(data),
   			headers: {
     			"Content-Type" : "application/json",
-    			"x-app-id": "745718c2",  
-    			"x-app-key": "d629dae08b944df9629b91f8c1dca886",  
+    			"x-app-id": "93e3077d",  
+    			"x-app-key": "98be55bed8e90b4dbce932dd3767174e",  
   			},
   			dataType: 'json',
   			success: function (data) {
