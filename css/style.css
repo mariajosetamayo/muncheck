@@ -199,12 +199,7 @@ a {
 	padding: 0.5em 2em;
 	margin-bottom: 50px;
 	border-radius: 3px;
-	/*margin-right: 38%;*/
-	/*opacity: (0.8);*/
-
 }
-
-
 
 /*---------------------------------------------------------------------------------
    Search Section Styles in Page 1
@@ -226,7 +221,7 @@ input {
 	min-width: 50%;
 	height: 70px;
 	display: block;
-	padding: 0.8em 0;
+	/*padding: 0.8em 0;*/
 	margin: 0.8em auto 0;
 	background: #007030;
 	opacity: 0.8;
@@ -543,6 +538,55 @@ p {
 =            Bootstrap 3 Media Queries             =
 ==================================================*/
 
+@media (min-width: 0px) and (max-width: 750px){
+	.title{
+		font-size: 3em;
+	}
+}
+
+@media (min-width: 0px) and (max-width: 414px){
+	.logoPage1{
+		display: none;
+	}
+
+	.what{
+		float: left;
+	}
+
+	.text{
+		margin-top: -13px;
+		font-size: 20px;
+	}
+
+	.mainSection{
+		margin-left: 14%;
+	}
+
+	#searchBox{
+		margin-top: -45px;
+		font-size: 14px;
+	}
+
+	.searchAgainBtn{
+		margin-left: 22%;
+	}
+}
+
+@media (min-width: 415px) and (max-width: 768px){
+	.searchAgainBtn{
+		margin-left: 38%;
+	}
+
+	.mainSection{
+		margin-left: 7%;
+	}
+}
+
+@media (min-width: 769px) and (max-width: 991px){
+	.searchAgainBtn{
+		margin-left: 39%;
+	}
+}
 
 
 
