@@ -128,7 +128,7 @@ $(document).ready(function(){
 			}
 		}
 
-		$(".performance-facts__title").text("Nutrition Information       " + data.foods[0].serving_weight_grams + " grams")
+		$(".performance-facts__title").text("Nutrition Information       "+ data.foods[0].serving_weight_grams + " grams")
 		$("#calories").text(data.foods[0].nf_calories + " Kcal")
 		$("#total_fat").text(data.foods[0].nf_total_fat + " g");
 		$("#saturated_fat").text(data.foods[0].nf_saturated_fat + " g");
