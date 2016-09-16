@@ -31,7 +31,7 @@ body {
 	min-height: 96%;
 	margin: 0.8em auto;
 	padding-bottom: 20px;
-	font-family: 'Special Elite', cursive;
+	font-family: 'Open Sans', sans-serif;
 	background-image: url("../images/fruitsVeg5.png");
 	text-align: center;
 	-webkit-border-radius: 4px;
@@ -64,40 +64,41 @@ a {
    Header Styles page 1 and page 2
 ---------------------------------------------------------------------------------*/
 
-nav {
+.nav {
 	position: relative;
 	height: 10%;
 	padding: 1em;
 }
 
-nav ul li {
+.logo, .what {
 	/*text-transform: uppercase;*/
 	font-weight: 700;
 	font-size: 1.8em;
 	margin-right: 8%;
+	font-family: 'Special Elite', sans-serif;
 	/*margin: auto;*/
 }
 
-nav ul li:first-child {
+.logo {
 	float: left;
 	list-style: none;
 	margin-left: -1%;
 	margin: auto;
 }
 
-nav ul li:last-child {
+.what {
 	float: right;
 	list-style: none;
 
 
 }
 
-nav a {
+.nav a {
 	text-decoration: none;
 	color: black;
 }
 
-nav a:hover{
+.nav a:hover{
 	color: #007030;
 	text-decoration: none;
 }
@@ -113,6 +114,7 @@ nav a:hover{
 	font-size: 4em;
 	color: black;
 	margin-top: 5px;
+	font-family: 'Special Elite', cursive;
 
 }
 
@@ -123,6 +125,7 @@ nav a:hover{
 	color: black;
 	margin-top: -4%;
     margin-bottom: 20px;
+    font-family: 'Special Elite', cursive;
 }
 
 /*style for hidden modal*/
@@ -276,7 +279,7 @@ input:hover{
 	/*position: fixed;*/
 }
 
-#searchAgain{
+.searchAgain{
 	font-size: 30px;
 	margin: auto;
 	float: left;
@@ -307,10 +310,21 @@ input:hover{
 	border-radius: 2px;
 }
 
+.notFoundContainer{
+	background-color: rgba(163, 5, 5, .8);
+	border-radius: 2px;
+
+}
+
+.notFoundContainer #results, .notFoundContainer .foodItem, .notFoundContainer .micronutrients, .notFoundContainer .infoTag{
+	display:none;
+}
+
+
 .resultsBox{
 	/*background-color: white;*/
-	margin-top: 14%;
-	height: 100px;
+	margin: 30px auto;
+  	height: 150px;
 }
 
 .reccomendation{
@@ -320,20 +334,23 @@ input:hover{
 }
 
 #results{
-	/*margin-left: 56%;*/
+	/*width: 143px;*/
 }
 
 #results img{
-	max-width: 143px;
+	height: 100%;
+	/*width: 143px;*/
 	border-radius: 5px;
 	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
-	margin-top: -5%;
+	/*margin-top: -5%;*/
 }
 
 #results2{
-	width: 68%;
-	margin-top: 15%;
+	/*width: 68%;
+	margin-top: 15%;*/
 	color: white;
+	padding-top:10%;
+	font-family: 'Special Elite', sans-serif;
 
 }
 
@@ -358,6 +375,7 @@ input:hover{
 	font-size: 20px;
 	overflow: scroll;
 	height:214px;
+	padding: 10px;
 }
 
 #results2 h2{
@@ -368,11 +386,23 @@ input:hover{
 	padding-top: 21px;
 }
 
-.infoTag{
-	width:80%;
+/*.infoTag{
+	margin:0px;
+	margin-top:20px;
+	padding: 0 15px;*/
+	/*width:80%;
 	margin-left: 10%;
-	margin-right: 10%;
+	margin-right: 10%;*/
 	/*margin-top: -22%;*/
+/*}*/
+
+.infoTag{
+  margin:20px 0px;
+  padding: 0 15px;
+}
+
+.performance-facts, .infoTag{
+  width:100%;
 }
 
 
@@ -394,6 +424,7 @@ p {
 .performance-facts {
   border: 1px solid black;
   margin-bottom: 20px;
+  margin-top: 0px;
   float: left;
   /*margin-left: 10%;*/
   padding: 0.5rem;
@@ -493,6 +524,17 @@ p {
   border-bottom: 1px solid black;
 }
 
+.searchAgainBtn{
+	margin-left: 29%;
+	margin-bottom: 10px;
+	font-size: 23px;
+	display: inline-block;
+    height: 100%;
+    background-color: rgba(201,223,138,0.6);
+    color: white;
+    border-radius: 5px;
+    font-family: 'Special Elite', sans-serif;
+}
 /*---------------------------------------------------------------------------------
    grid layout tests
 ---------------------------------------------------------------------------------*/

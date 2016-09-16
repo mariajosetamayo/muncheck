@@ -20,13 +20,14 @@ $(document).ready(function(){
 		return show("page2", "page1")
 	})
 
-	$("#searchAgain").click(function(){
+	$(".searchAgain").click(function(){
 		userPrefs.hasDiabetes = false
 		userPrefs.hasKidneyDisease = false
 		userPrefs.wantsToLoseWeight = false
 		$("#searchBox").val("")
 		userPrefs[window.selectedDisease] =  false
 		$(".disease").removeClass("diseaseToggle");
+		$(".resultsContainer").removeClass("notFoundContainer")
 		return show("page1", "page2")
 	})
 
@@ -82,8 +83,8 @@ $(document).ready(function(){
   			data: JSON.stringify(data),
   			headers: {
     			"Content-Type" : "application/json",
-    			"x-app-id": "93e3077d",  
-    			"x-app-key": "98be55bed8e90b4dbce932dd3767174e",  
+    			"x-app-id": "c7faf842",  
+    			"x-app-key": "bc4a198b34d738f0f52d5f874775d99d",  
   			},
   			dataType: 'json',
   			success: function (data) {
@@ -100,10 +101,17 @@ $(document).ready(function(){
     			console.log(request.responseText);
     			console.log(error);
     			console.log(status);
+    			var errorElem = showError(error);
   			}
 		});
 	}
-  	
+
+	var showError = function(error){
+		$(".resultsContainer").addClass("notFoundContainer")
+		var errorText = $("#results2").append("<h2> This food is not available. Please search again. </h2>")
+		errorElem.append(errorText)
+	}
+	
   	function showNutritionalValue(data){
   // Funcion que contiene el jQuery para mostrar en la pantalla.
 		// Esto es la separacion de concerns. En la de arriba se hace el query, en
@@ -172,6 +180,12 @@ $(document).ready(function(){
 			if((data.foods[0].nf_calories> 200) || data.foods[0].nf_total_carbohydrate>60 || (data.foods[0].nf_saturated_fat>50) || (transFat>0) || (data.foods[0].serving_weight_grams<15 && data.foods[0].nf_calories> 30)){
 				isRecommended = false;
 			}
+		}
+
+		if ((userPrefs.hasDiabetes === false) && (userPrefs.hasKidneyDisease === false) && (userPrefs.wantsToLoseWeight === false)){
+			if ((data.foods[0].nf_total_carbohydrate>=60) || (data.foods[0].nf_calories> 200) || (data.foods[0].serving_weight_grams<15 && data.foods[0].nf_calories> 30) || (data.foods[0].nf_saturated_fat>3) || (transFat>0) || (data.foods[0].serving_weight_grams<15 && data.foods[0].nf_calories> 30)){
+				isRecommended = false;
+			};
 		}
 		return isRecommended;
 	}
