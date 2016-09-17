@@ -1,7 +1,7 @@
 /*---------------------------------------------------------------------------------
    Common Styles
 ---------------------------------------------------------------------------------*/
-/*float styles*/
+
 .clearfix:before,
 .clearfix:after {
     content: " ";  1 
@@ -40,25 +40,14 @@ body {
 	-webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
 	-moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
 	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
-	/*display: none;*/
 }
 
 body { overflow-x: hidden;}
-
-/*.row {
-  margin-left: 0px;
-  margin-right: 0px;
-}*/
-
 
 a {
 	text-decoration: none;
 	color: black;
 }
-
-/*ul li {	
-	display: inline;
-}*/
 
 /*---------------------------------------------------------------------------------
    Header Styles page 1 and page 2
@@ -71,12 +60,10 @@ a {
 }
 
 .logo, .what {
-	/*text-transform: uppercase;*/
 	font-weight: 700;
 	font-size: 1.8em;
 	margin-right: 8%;
 	font-family: 'Special Elite', sans-serif;
-	/*margin: auto;*/
 }
 
 .logo {
@@ -106,8 +93,6 @@ a {
 .logoTitle{
 	margin-top: 15%;
 }
-
-
 
 .title {
 	font-weight: 900;
@@ -188,10 +173,6 @@ a {
 	line-height: 1.5em;
 }
 
-/*.information > div ul li strong{
-	text-decoration: underline;
-}*/
-
 .informationGotIt {
 	font-size: 1.5em;
 	background: #F0F7DA;
@@ -221,29 +202,22 @@ input {
 	min-width: 50%;
 	height: 70px;
 	display: block;
-	/*padding: 0.8em 0;*/
 	margin: 0.8em auto 0;
 	background: #007030;
 	opacity: 0.8;
 	color: #fff;
-	/*border: solid 1px #1f253d;*/
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
 	font-family: 'Special Elite', sans-serif;
 	font-size: 170%;
 	clear: both;
-	/*position: relative;*/
     right: 35%;
 }
 
 input:hover{
 	background-color: rgb(30, 102, 11);
-	/*width: 400px;
-	-webkit-transition: width 1.5s;*/
 }
-
-
 
 .disease{
 	display: inline-block;
@@ -271,7 +245,6 @@ input:hover{
 	background-color: rgba(40, 113, 99, 0.2);
 	height: 30%;
 	width: 100%;
-	/*position: fixed;*/
 }
 
 .searchAgain{
@@ -317,7 +290,6 @@ input:hover{
 
 
 .resultsBox{
-	/*background-color: white;*/
 	margin: 30px auto;
   	height: 150px;
 }
@@ -328,25 +300,16 @@ input:hover{
 	text-shadow: 1px 1px #ff0000;
 }
 
-#results{
-	/*width: 143px;*/
-}
-
 #results img{
 	height: 100%;
-	/*width: 143px;*/
 	border-radius: 5px;
 	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
-	/*margin-top: -5%;*/
 }
 
 #results2{
-	/*width: 68%;
-	margin-top: 15%;*/
 	color: white;
 	padding-top:10%;
 	font-family: 'Special Elite', sans-serif;
-
 }
 
 .foodItem, .micronutrients{
@@ -354,7 +317,6 @@ input:hover{
 	height: 100px;
 	background-color: white;
 	min-width: 55%;
-	/*margin-left: 61%;*/
 	border-radius: 5px;
 	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
 }
@@ -365,7 +327,6 @@ input:hover{
 }
 
 .micronutrients{
-	/*margin: 15px;*/
 	margin-top: 25px;
 	font-size: 20px;
 	overflow: scroll;
@@ -373,23 +334,9 @@ input:hover{
 	padding: 10px;
 }
 
-#results2 h2{
-	/*margin-left: 20%;*/
-}
-
 .foodItem p{
 	padding-top: 21px;
 }
-
-/*.infoTag{
-	margin:0px;
-	margin-top:20px;
-	padding: 0 15px;*/
-	/*width:80%;
-	margin-left: 10%;
-	margin-right: 10%;*/
-	/*margin-top: -22%;*/
-/*}*/
 
 .infoTag{
   margin:20px 0px;
@@ -421,7 +368,6 @@ p {
   margin-bottom: 20px;
   margin-top: 0px;
   float: left;
-  /*margin-left: 10%;*/
   padding: 0.5rem;
   background-color: white;
   table {
