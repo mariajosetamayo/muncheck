@@ -162,7 +162,7 @@ var showError = function(error){
 };
 
 function showNutritionalValue(data){
-  foodItemNameContainer.val() = "";
+  	foodItemNameContainer.val("");
 	foodPhoto.attr('src', data.foods[0].photo.thumb);
 	foodItemNameContainer.text(data.foods[0].food_name);
 
@@ -205,5 +205,5 @@ function showRecomendation(isRecommended){
 };
 
 $(document).ready(function(){
-	showCorrectView();
+	showCorrectView("page1", "page2");
 });
