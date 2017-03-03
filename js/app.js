@@ -67,10 +67,9 @@ function getFoodData(searchTerm){
 	});
 }
 
-// Function for getting a recommendation for the food query //
-
 function isFoodRecommended(data){
 	var isRecommended = true;
+
 	for (var i=0; i< data.foods[0].full_nutrients.length; i++){
 		var nutrient = data.foods[0].full_nutrients[i];
 		var nutrientID = nutrient.attr_id;
@@ -107,7 +106,6 @@ function isFoodRecommended(data){
 };
 
 /////// Event listeners for View 1 ////////
-
 submitFoodQueryBtn.click(function(){
 	return showCorrectView("page2", "page1");
 });
@@ -133,12 +131,11 @@ diseasesBtns.click(function(event){
 
 submitFoodQueryBtn.click(function(event){
 	event.preventDefault();
-	var userFoodInput = document.getElementById("searchBox").value;
+	var userFoodInput = searchFoodBox.val();
 	getFoodData(userFoodInput);
 });
 
 /////// Event listeners for View 2 ///////
-
 searchFoodAgainBtn.click(function(){
 	userPrefs.hasDiabetes = false;
 	userPrefs.hasKidneyDisease = false;
@@ -151,7 +148,6 @@ searchFoodAgainBtn.click(function(){
 });
 
 /////// DOM manipulation for View 1 and 2 ///////
-
 function showCorrectView(shown, hidden) {
 	document.getElementById(shown).style.display='block';
 	document.getElementById(hidden).style.display='none';
@@ -159,16 +155,14 @@ function showCorrectView(shown, hidden) {
 };
 
 /////// DOM manipulation for View 2 ///////
-
 var showError = function(error){
-	resultsContainer .addClass("notFoundContainer");
+	resultsContainer.addClass("notFoundContainer");
 	var errorText = recommendationContainer.append("<h2> This food is not available. Please search again. </h2>");
 	errorElem.append(errorText);
 };
 
 function showNutritionalValue(data){
-	document.getElementById("foodItem").value = "";
-	document.getElementById("foodItem").value = "";
+  foodItemNameContainer.val() = "";
 	foodPhoto.attr('src', data.foods[0].photo.thumb);
 	foodItemNameContainer.text(data.foods[0].food_name);
 
@@ -184,7 +178,7 @@ function showNutritionalValue(data){
 			}
 		}
 	}
-
+	
 	nutritionalInfoTableHeading.text("Nutrition information for a portion size of:"+ " " + " " + data.foods[0].serving_weight_grams + " grams");
 	caloriesTableField.text(data.foods[0].nf_calories + " Kcal");
 	totalFatTableField .text(data.foods[0].nf_total_fat + " g");
@@ -195,7 +189,6 @@ function showNutritionalValue(data){
 	dietaryFiberTableField.text(data.foods[0].nf_dietary_fiber + " g");
 	sugarTableField.text(data.foods[0].nf_sugars + " g");
 	proteinTableField.text(data.foods[0].nf_protein + " g");
-
 }
 
 function showRecomendation(isRecommended){

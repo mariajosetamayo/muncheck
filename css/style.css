@@ -4,8 +4,8 @@
 
 .clearfix:before,
 .clearfix:after {
-    content: " ";  1 
-    display: table;  2 
+    content: " ";  1
+    display: table;  2
 }
 
 .clearfix:after {
@@ -23,7 +23,6 @@ html {
 	height: 100%;
 	background-color: #00544B;
 }
-
 
 body {
 	position: relative;
@@ -76,8 +75,6 @@ a {
 .what {
 	float: right;
 	list-style: none;
-
-
 }
 
 .nav a {
@@ -113,7 +110,7 @@ a {
     font-family: 'Special Elite', cursive;
 }
 
-/*style for hidden modal*/
+/* Styles for hidden modal */
 .overlay {
 	width: 100%;
 	height: 100%;
@@ -152,7 +149,6 @@ a {
 	color: white;
 }
 
-
 .informationP {
 	margin: 0;
 	padding: 10px 0;
@@ -168,7 +164,7 @@ a {
 
 .informationLi {
 	padding: 5px 0;
-	display: block;	
+	display: block;
 	list-style-type: disc;
 	line-height: 1.5em;
 }
@@ -185,6 +181,7 @@ a {
 /*---------------------------------------------------------------------------------
    Search Section Styles in Page 1
 ---------------------------------------------------------------------------------*/
+
 #searchBox {
     resize: none;
     margin-top: -60px;
@@ -195,8 +192,6 @@ a {
     overflow: auto;
     width: 80%;
 }
-
-
 
 input {
 	min-width: 50%;
@@ -235,7 +230,7 @@ input:hover{
 
 .diseaseToggle{
 	background-color: #007030;
-	color:white; 
+	color:white;
 }
 
 /*---------------------------------------------------------------------------------
@@ -281,13 +276,11 @@ input:hover{
 .notFoundContainer{
 	background-color: rgba(163, 5, 5, .8);
 	border-radius: 2px;
-
 }
 
 .notFoundContainer #results, .notFoundContainer .foodItem, .notFoundContainer .micronutrients, .notFoundContainer .infoTag{
 	display:none;
 }
-
 
 .resultsBox{
 	margin: 30px auto;
@@ -398,7 +391,7 @@ p {
     font-weight: normal;
     text-align: left;
     padding: 0.25rem 0;
-    border-top: 1px solid black; 
+    border-top: 1px solid black;
     white-space: nowrap;
   }
   td {
@@ -426,7 +419,7 @@ p {
   margin: 0 0 0.5rem 0;
   thead {
     tr {
-      border-bottom: 1px solid black; 
+      border-bottom: 1px solid black;
     }
   }
   td {
@@ -533,8 +526,3 @@ p {
 		margin-left: 39%;
 	}
 }
-
-
-
-
-
