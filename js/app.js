@@ -180,7 +180,7 @@ function showNutritionalValue(data){
 			}
 		}
 	}
-	
+
 	nutritionalInfoTableHeading.text("Nutrition information for a portion size of:"+ " " + " " + data.foods[0].serving_weight_grams + " grams");
 	caloriesTableField.text(data.foods[0].nf_calories + " Kcal");
 	totalFatTableField .text(data.foods[0].nf_total_fat + " g");
