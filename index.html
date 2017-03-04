@@ -1,228 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Muncheck</title>
-		<!-- Meta Tags -->
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Stylesheets -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" href="css/style.css"/>
-		<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,900italic' rel='stylesheet' type='text/css'>
-		<link href="https://fonts.googleapis.com/css?family=Special+Elite"rel="stylesheet" type='text/css'>	
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	</head>
-	<body>
-		<div id="page1">
-			<div class="container-fullwidth navBar">
-				<div class="row">
-					<div class="col-xs-4 col-sm-10 col-md-12 col-lg-12"></div>
+<head>
+	<title>Muncheck</title>
+	<!-- Meta Tags -->
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Special+Elite"rel="stylesheet" type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+</head>
+<body>
+	<div id="page1">
 
-					<!-- Top Navigation -->
-						<nav class= "nav"> 
+		<div class="container-fullwidth navBar">
+			<div class="row">
+				<div class="col-xs-4 col-sm-10 col-md-12 col-lg-12"></div>
+				<!-- Top Navigation -->
+				<nav class= "nav">
+					<ul class="clearfix">
+						<li><a class="logo logoPage1" href="#">Muncheck</a></li>
+						<li><a class="what" href="#">How does it work?</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>
+				<!-- Modal Information Box -->
+				<div class="overlay" id="modal">
+					<div class="information">
+						<h3 class="informationH3">How do I start a food search and get food choice reccomendations?</h3>
+						<p class="informationP"><strong>Muncheck</strong> is an easy way to find nutritional information and know if a food item is a healthy choice according to your health status.</p>
+						<p class="informationP"><strong>To start a search and find recommendations:</strong></p>
+						<ul class="informationUl">
+							<li class="informationLi">1. Write a <strong>food item and the quantity</strong> in the text box of the main screen. </li>
+							<li class="informationLi">2. <strong>Choose an option of your health status or fitness goal</strong> by clicking one of the buttons below your food search. You may choose more than one.</li>
+							<li class="informationLi">3. Press the button below to check the food item and get a recommendation </li>
+						</ul>
+						<br/><br/>
+						<a class="informationGotIt" id="close" href="#">Got It!</a>
+						<br/>
+						<br/>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container mainSection">
+			<div class="row">
+				<div class="col-xs-10 col-sm-10 col-md-11 col-lg-11 text-center">
+
+					<!-- logo text -->
+					<div class="logoTitle">
+						<h1 class="title">Muncheck</h1>
+						<p class="text">What do you want to eat?</p>
+					</div>
+					<section class="searchSection"> <!-- Search Section -->
+
+						<form>
+							<textarea id="searchBox" value="Clear" placeholder="Type the name of a food item here. Ex. 1 apple" rows="4" cols="40" required></textarea>
+							<br/>
+							<button class="disease btn btn-md btn-success" value="yesDiabetes" id="hasDiabetes">I have diabetes</button>
+							<button class="disease btn btn-md btn-success" value="yesKidney" id="hasKidneyDisease">I have kidney disease</button>
+							<button class="disease btn btn-md btn-success" value="yesWeight" id="wantsToLoseWeight">I want to lose weight</button>
+							<br/>
+
+						</form>
+						<input type="submit" class="btn btn-xl btn-success" value="Check food item" id="submitBtn"/>
+					</section>
+				</div>
+			</div>
+		</div>
+
+	</div> <!-- / View 1 -->
+
+	<!-- View 2 -->
+	<div id="page2">
+
+		<div class="container-fullwidth navBar">
+			<div class="row">
+				<div class="col-lg-12">
+					<header class="navBar">
+						<!-- Top Navigation -->
+						<nav class="nav">
 							<ul class="clearfix">
-								<li><a class="logo logoPage1" href="#">Muncheck</a></li>
-								<li><a class="what" href="#">How does it work?</a></li>
-
+								<li class="searchAgain logo"><a href="#">Muncheck</a></li>
 							</ul>
 						</nav>
+					</header>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="resultsContainer">
+				<div class="row">
+					<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+						<div class="resultsBox" id="results2">
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+						<div class="resultsBox" id="results">
+							<img id="foodPhoto" src="">
+						</div>
 					</div>
 				</div>
-        <div class="container">
-				  <div class="row">
-					 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>
-						  <!-- Modal Information Box -->
-						  <div class="overlay" id="modal">
-							  <div class="information">
-								  <h3 class="informationH3">How do I start a food search and get food choice reccomendations?</h3>
-								  <p class="informationP"><strong>Muncheck</strong> is an easy way to find nutritional information and know if a food item is a healthy choice according to your health status.</p>
-                  <p class="informationP"><strong>To start a search and find recommendations:</strong></p>
-								  <ul class="informationUl">
-									  <li class="informationLi">1. Write a <strong>food item and the quantity</strong> in the text box of the main screen. </li>
-									  <li class="informationLi">2. <strong>Choose an option of your health status or fitness goal</strong> by clicking one of the buttons below your food search. You may choose more than one.</li>
-									  <li class="informationLi">3. Press the button below to check the food item and get a recommendation </li>
-								  </ul>
-                  <br/><br/>
-								  <a class="informationGotIt" id="close" href="#">Got It!</a>
-                  <br/>
-                  <br/>
-							  </div>
-						  </div>
-					 </header>
-				  </div>
-        </div>	
-			<div class="container mainSection">
 				<div class="row">
-					<div class="col-xs-10 col-sm-10 col-md-11 col-lg-11 text-center">
-
-						<!-- logo text -->
-            <div class="logoTitle">         
-  						<h1 class="title">Muncheck</h1>
-  						<p class="text">What do you want to eat?</p>
-            </div>
-						<section class="searchSection"> <!-- Search Section -->
-			
-							<form>
-								<textarea id="searchBox" value="Clear" placeholder="Type the name of a food item here. Ex. 1 apple" rows="4" cols="40" required></textarea>
-								<br/>
-								<button class="disease" value="yesDiabetes" id="hasDiabetes">I have diabetes</button>
-								<button class="disease" value="yesKidney" id="hasKidneyDisease">I have kidney disease</button>
-								<button class="disease" value="yesWeight" id="wantsToLoseWeight">I want to lose weight</button>
-								<br/>
-								
-    					</form>
-            	<input type="submit" value="Check food item" id="submitBtn"/>
-						</section>
+					<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 micronutrientsInfo">
+						<div class="foodItem" id="foodItem">
+						</div>
+						<div class="micronutrients" id="micronutrientsResults">
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 text-left">
+						<div class="infoTag" id="infoTag">
+							<section class="performance-facts">
+								<header class="performance-facts__header">
+									<h1 class="performance-facts__title">Nutrition Facts</h1>
+								</header>
+								<table class="performance-facts__table">
+									<thead>
+										<tr>
+											<th colspan="3" class="small-info" id="serving">
+												Amount Per Serving
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th colspan="2">
+												<b>Calories</b>
+											</th>
+											<td>
+												<b id="calories"></b>
+											</td>
+										</tr>
+										<tr class="thick-row">
+											<th colspan="2">
+												<b>Total Fat</b>
+											</th>
+											<td>
+												<b id="total_fat"></b>
+											</td>
+										</tr>
+										<tr>
+											<td class="blank-cell">
+											</td>
+											<th>
+												<b>Saturated Fat</b>
+											</th>
+											<td>
+												<b id="saturated_fat"></b>
+											</td>
+										</tr>
+										<tr>
+											<th colspan="2">
+												<b>Cholesterol</b>
+											</th>
+											<td>
+												<b id="cholesterol"></b>
+											</td>
+										</tr>
+										<tr>
+											<th colspan="2">
+												<b>Sodium</b>
+											</th>
+											<td>
+												<b id="sodium"></b>
+											</td>
+										</tr>
+										<tr>
+											<th colspan="2">
+												<b>Total Carbohydrate</b>
+											</th>
+											<td>
+												<b id="total_carbs"></b>
+											</td>
+										</tr>
+										<tr>
+											<td class="blank-cell">
+											</td>
+											<th>
+												Dietary Fiber
+											</th>
+											<td>
+												<b id="dietary_fiber"></b>
+											</td>
+										</tr>
+										<tr>
+											<td class="blank-cell">
+											</td>
+											<th>
+												Sugars
+											</th>
+											<td>
+												<b id="sugar"></b>
+											</td>
+										</tr>
+										<tr class="thick-end">
+											<th colspan="2">
+												<b>Protein</b>
+											</th>
+											<td>
+												<b id="protein"></b>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</section>
+						</div>
+						<button class="searchAgain searchAgainBtn btn btn-md btn-success">Search again</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- </div> -->
+	</div>
 
-		<!-- page2 -->
-		<div id="page2">
-			<div class="container-fullwidth navBar">
-				<div class="row">
-					<div class="col-lg-12">
-						<header class="navBar"> <!--Header -->
-						<!-- Top Navigation -->
-							<nav class="nav"> 
-								<ul class="clearfix">
-									<li class="searchAgain logo"><a href="#">Muncheck</a></li>
-								</ul>
-							</nav>
-						</header>
-					</div>
-				</div>
-			</div>
-			<div class="container">
-        <div class="resultsContainer">
-  				<div class="row">
-            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-              <div class="resultsBox" id="results2">
-              </div>
-            </div>
-  					<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-  						<div class="resultsBox" id="results">
-  							<img id="foodPhoto" src="">
-  						</div>
-  					</div>
-  				</div>
-  				<div class="row">
-            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-              <div class="foodItem" id="foodItem">
-              </div>
-              <div class="micronutrients" id="micronutrientsResults">
-              </div>
-            </div>
-  					<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 text-left">
-  						<div class="infoTag" id="infoTag">
-  							<section class="performance-facts">
-   								<header class="performance-facts__header">
-    								<h1 class="performance-facts__title">Nutrition Facts</h1>
-  								</header>
-  								<table class="performance-facts__table">
-    								<thead>
-     	 								<tr>
-      									<th colspan="3" class="small-info" id="serving">
-        										Amount Per Serving
-      									</th>
-    									</tr>
-    								</thead>
-   									<tbody>
-      									<tr>
-        									<th colspan="2">
-          									<b>Calories</b>
-        									</th>
-        									<td>
-          										<b id="calories"></b>
-        									</td>
-      									</tr>
-      									<tr class="thick-row">
-        									<th colspan="2">
-          										<b>Total Fat</b>
-        									</th>
-        									<td>
-          										<b id="total_fat"></b>
-        									</td>
-      									</tr>
-      									<tr>
-       										<td class="blank-cell">
-        									</td>
-        									<th>
-          										<b>Saturated Fat</b>
-        									</th>
-        									<td>
-          										<b id="saturated_fat"></b>
-        									</td>
-      									</tr>
-      									<tr>
-        									<th colspan="2">
-          										<b>Cholesterol</b>
-        									</th>
-        									<td>
-          										<b id="cholesterol"></b>
-        									</td>
-      									</tr>
-      									<tr>
-        									<th colspan="2">
-          										<b>Sodium</b>
-        									</th>
-        									<td>
-          										<b id="sodium"></b>
-        									</td>
-      									</tr>
-      									<tr>
-        									<th colspan="2">
-          										<b>Total Carbohydrate</b>
-        									</th>
-        									<td>
-          										<b id="total_carbs"></b>
-        									</td>
-      									</tr>
-      									<tr>
-        									<td class="blank-cell">
-        									</td>
-        									<th>
-          										Dietary Fiber
-        									</th>
-        									<td>
-          										<b id="dietary_fiber"></b>
-        									</td>
-      									</tr>
-      									<tr>
-        									<td class="blank-cell">
-        									</td>
-        									<th>
-          										Sugars
-        									</th>
-        									<td>
-        										<b id="sugar"></b>
-        									</td>
-      									</tr>
-      									<tr class="thick-end">
-        									<th colspan="2">
-          										<b>Protein</b>
-        									</th>
-        									<td>
-        										<b id="protein"></b>
-        									</td>
-      									</tr>
-    								</tbody>
-  								</table>
-  							</section>
-  						</div>
-              <button class="searchAgain searchAgainBtn">Search again</button>
-					  </div>
-				  </div>
-			  </div>
-      </div>
-		</div>
-		
-		<!-- JavaScript -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script type="text/javascript" src="js/app.js"></script>
-		<script type="text/javascript" src="js/nutrientFieldObj.js"></script>
-	</body>
+	<!-- JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/nutrientFieldObj.js"></script>
+</body>
 </html>
