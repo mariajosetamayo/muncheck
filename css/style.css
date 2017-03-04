@@ -117,7 +117,7 @@ Header Styles page 1 and page 2
   width: 100%;
   height: 100%;
   color: black;
-  background: rgba(89, 154, 61, 0.9);
+  background: #003621;
   position: absolute;
   top: 0;
   left: 0;
@@ -149,6 +149,7 @@ Header Styles page 1 and page 2
   background: rgba(0,0,0,0.1);
   border-radius: 3px 3px 0 0;
   color: white;
+  text-shadow: 2px 2px 2px #282828;
 }
 
 .informationP {
@@ -156,12 +157,15 @@ Header Styles page 1 and page 2
   padding: 10px 0;
   line-height: 2em;
   text-align: justify;
+  font-size: 18px;
+  word-spacing: -2px;
 }
 
 .informationUl {
   margin-bottom: -30px;
   padding: 0 0 30px 20px;
   text-align: left;
+  font-size: 15px;
 }
 
 .informationLi {
@@ -169,6 +173,7 @@ Header Styles page 1 and page 2
   display: block;
   list-style-type: disc;
   line-height: 1.5em;
+  font-size: 15px;
 }
 
 .informationGotIt {
