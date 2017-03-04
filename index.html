@@ -8,10 +8,8 @@
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css"/>
-	<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,900italic' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Special+Elite"rel="stylesheet" type='text/css'>
-	<link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 </head>
 <body>
 	<div id="page1">
@@ -66,13 +64,13 @@
 						<form>
 							<textarea id="searchBox" value="Clear" placeholder="Type the name of a food item here. Ex. 1 apple" rows="4" cols="40" required></textarea>
 							<br/>
-							<button class="disease" value="yesDiabetes" id="hasDiabetes">I have diabetes</button>
-							<button class="disease" value="yesKidney" id="hasKidneyDisease">I have kidney disease</button>
-							<button class="disease" value="yesWeight" id="wantsToLoseWeight">I want to lose weight</button>
+							<button class="disease btn btn-md btn-success" value="yesDiabetes" id="hasDiabetes">I have diabetes</button>
+							<button class="disease btn btn-md btn-success" value="yesKidney" id="hasKidneyDisease">I have kidney disease</button>
+							<button class="disease btn btn-md btn-success" value="yesWeight" id="wantsToLoseWeight">I want to lose weight</button>
 							<br/>
 
 						</form>
-						<input type="submit" value="Check food item" id="submitBtn"/>
+						<input type="submit" class="btn btn-xl btn-success" value="Check food item" id="submitBtn"/>
 					</section>
 				</div>
 			</div>
@@ -80,7 +78,7 @@
 
 	</div> <!-- / View 1 -->
 
-	<!-- page2 -->
+	<!-- View 2 -->
 	<div id="page2">
 
 		<div class="container-fullwidth navBar">
@@ -112,7 +110,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+					<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 micronutrientsInfo">
 						<div class="foodItem" id="foodItem">
 						</div>
 						<div class="micronutrients" id="micronutrientsResults">
@@ -215,7 +213,7 @@
 								</table>
 							</section>
 						</div>
-						<button class="searchAgain searchAgainBtn">Search again</button>
+						<button class="searchAgain searchAgainBtn btn btn-md btn-success">Search again</button>
 					</div>
 				</div>
 			</div>

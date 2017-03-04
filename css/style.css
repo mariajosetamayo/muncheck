@@ -21,7 +21,7 @@
 html {
 	width: 100%;
 	height: 100%;
-	background-color: #00544B;
+	background-color: #003621;
 }
 
 body {
@@ -30,7 +30,7 @@ body {
 	min-height: 96%;
 	margin: 0.8em auto;
 	padding-bottom: 20px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Muli', sans-serif;
 	background-image: url("../images/fruitsVeg5.png");
 	text-align: center;
 	-webkit-border-radius: 4px;
@@ -62,7 +62,6 @@ a {
 	font-weight: 700;
 	font-size: 1.8em;
 	margin-right: 8%;
-	font-family: 'Special Elite', sans-serif;
 }
 
 .logo {
@@ -70,11 +69,14 @@ a {
 	list-style: none;
 	margin-left: -1%;
 	margin: auto;
+	font-family: 'Special Elite', sans-serif;
 }
 
 .what {
 	float: right;
 	list-style: none;
+	color: #282828;
+    text-shadow: 0.3px 0.3px 0.3px black;
 }
 
 .nav a {
@@ -104,10 +106,10 @@ a {
 	font-weight: 900;
 	font-size: 2em;
 	padding: 1.8em;
-	color: black;
+	color: #282828;
 	margin-top: -4%;
     margin-bottom: 20px;
-    font-family: 'Special Elite', cursive;
+    text-shadow: 0.3px 0.3px 0.3px black;
 }
 
 /* Styles for hidden modal */
@@ -190,7 +192,11 @@ a {
     border: solid #F1F1F1;
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
     overflow: auto;
-    width: 80%;
+    width: 60%;
+    border: 2px solid #586352;
+    box-shadow: 2px 2px 2px grey;
+    text-align: center;
+    padding-top: 7%;
 }
 
 input {
@@ -198,38 +204,36 @@ input {
 	height: 70px;
 	display: block;
 	margin: 0.8em auto 0;
-	background: #007030;
-	opacity: 0.8;
+	background-color: #076124 !important;
+	border-color: #076124 !important;
+	opacity: 0.9;
 	color: #fff;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
-	font-family: 'Special Elite', sans-serif;
-	font-size: 170%;
+	font-size: 170% !important;
 	clear: both;
     right: 35%;
+    box-shadow: 2px 2px 2px grey;
+    text-shadow: 0.5px 0.5px 0.3px black;
 }
 
 input:hover{
-	background-color: rgb(30, 102, 11);
+	background-color: #007030 !important;
 }
 
 .disease{
-	display: inline-block;
-    width: 132px;
-    height: 48px;
-    background-color: white;
-    opacity: 0.8;
-    color: black;
-    font-family: 'Special Elite', sans-serif;
-    font-size: 15px;
-    margin-top: 10px;
-    border-radius: 2px;
-    border: solid #007030;
+    margin-right: 2%;
+    margin-top: 2%;
+    box-shadow: 2px 2px 2px grey;
+    text-shadow: 0.5px 0.5px 0.3px black;
+    background-color: #076124 !important;
+	border-color: #076124 !important;
 }
 
+
 .diseaseToggle{
-	background-color: #007030;
+	background-color: #790D2E !important;
 	color:white;
 }
 
@@ -264,18 +268,21 @@ input:hover{
 }
 
 .recommendedContainer{
-	background-color: rgba(34, 112, 13,.8);
+	background: linear-gradient(#003923, #22663F, #003923);
 	border-radius: 2px;
+	box-shadow: 3px 3px 3px grey;
 }
 
 .notRecommendedContainer{
-	background-color: rgba(163, 5, 5, .8);
+	background: linear-gradient(#5A2623,#A02025,#5A2623);
 	border-radius: 2px;
+	box-shadow: 3px 3px 3px grey;
 }
 
 .notFoundContainer{
 	background-color: rgba(163, 5, 5, .8);
 	border-radius: 2px;
+	padding-left: 5%;
 }
 
 .notFoundContainer #results, .notFoundContainer .foodItem, .notFoundContainer .micronutrients, .notFoundContainer .infoTag{
@@ -295,28 +302,34 @@ input:hover{
 
 #results img{
 	height: 100%;
-	border-radius: 5px;
-	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
+	border-radius: 2px;
+	box-shadow: 2px 2px 2px #282828;
+}
+
+.micronutrientsInfo{
+	margin-top: -1%;
 }
 
 #results2{
 	color: white;
 	padding-top:10%;
-	font-family: 'Special Elite', sans-serif;
+	text-shadow: 2px 2px 2px #282828;
 }
 
-.foodItem, .micronutrients{
+.micronutrients{
 	margin:20px;
 	height: 100px;
 	background-color: white;
 	min-width: 55%;
-	border-radius: 5px;
-	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
+	border-radius: 2px;
+	box-shadow: 2px 2px 2px #282828;
 }
 
 .foodItem{
 	font-size: 150%;
 	height: 25px;
+	color: white;
+	text-shadow: 2px 2px 2px #282828;
 }
 
 .micronutrients{
@@ -461,13 +474,12 @@ p {
 .searchAgainBtn{
 	margin-left: 29%;
 	margin-bottom: 10px;
-	font-size: 23px;
-	display: inline-block;
-    height: 100%;
-    background-color: rgba(201,223,138,0.6);
+	font-size: 22px;
+    box-shadow: 2px 2px 2px #282828;
+    background-color: #076124 !important;
+    border-color: #076124 !important;
     color: white;
     border-radius: 5px;
-    font-family: 'Special Elite', sans-serif;
 }
 /*---------------------------------------------------------------------------------
    grid layout tests
@@ -504,6 +516,7 @@ p {
 	#searchBox{
 		margin-top: -45px;
 		font-size: 14px;
+		width: 90%;
 	}
 
 	.searchAgainBtn{

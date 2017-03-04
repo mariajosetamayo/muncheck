@@ -156,15 +156,17 @@ function showCorrectView(shown, hidden) {
 
 /////// DOM manipulation for View 2 ///////
 var showError = function(error){
+	resultsContainer.removeClass("notRecommendedContainer");
+	resultsContainer.removeClass("recommendedContainer");
 	resultsContainer.addClass("notFoundContainer");
-	var errorText = recommendationContainer.append("<h2> This food is not available. Please search again. </h2>");
+	var errorText = recommendationContainer.html("<h2> This food is not available. Please search again. </h2>");
 	errorElem.append(errorText);
 };
 
 function showNutritionalValue(data){
   	foodItemNameContainer.val("");
 	foodPhoto.attr('src', data.foods[0].photo.thumb);
-	foodItemNameContainer.text(data.foods[0].food_name);
+	foodItemNameContainer.text("Micronutrients in:" + " " + data.foods[0].food_name);
 
 	for (var i=0; i< data.foods[0].full_nutrients.length; i++){
 		var nutrient = data.foods[0].full_nutrients[i];
@@ -196,9 +198,9 @@ function showRecomendation(isRecommended){
 	if (isRecommended){
 		resultsContainer.addClass("recommendedContainer"); //changes background to green
 		resultsContainer.removeClass("notRecommendedContainer");
-		recommendationContainer.append("<h2> Recommended!!! </h2>");
+		recommendationContainer.html("<h2> Recommended! </h2>");
 	} else  {
-		recommendationContainer.append("<h2> Not Recommended!!! </h2>");
+		recommendationContainer.html("<h2> Not Recommended! </h2>");
 		resultsContainer.addClass("notRecommendedContainer"); //changes background to red
 		resultsContainer.removeClass("recommendedContainer");
 	}
