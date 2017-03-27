@@ -27,11 +27,12 @@ html {
 body {
 	position: relative;
 	width: 98%;
-	min-height: 96%;
+	min-height: 97%;
 	margin: 0.8em auto;
 	padding-bottom: 20px;
 	font-family: 'Muli', sans-serif;
-	background-image: url("../images/fruitsVeg5.png");
+	/*background-image: url("../images/fruitsVeg5.png");*/
+  /*background-color: #F9F9F9;*/
 	text-align: center;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -48,6 +49,54 @@ a {
 	color: black;
 }
 
+/*---------------------------------------------------------------------------------
+  Landing Page
+---------------------------------------------------------------------------------*/
+.landingPageTitleDiv{
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  height: 30%;
+  width: 50%;
+  margin: -15% 0 0 -25%;
+}
+
+.subTitles{
+  font-size: 20px;
+  text-shadow: 0.5px 0.5px 0.5px;
+}
+
+.subTitles1{
+  margin-top: -3%;
+  font-size: 25px;
+  color: #282828;
+  text-shadow: 0.5px 0.5px 0.9px;
+}
+
+.logoImage{
+  width: 135px;
+  margin: -1%;
+  padding-bottom: 8%;
+}
+
+.instructions{
+  font-size: 17px;
+  text-shadow: 0.3px 0.3px 0.3px;
+  /*padding-top: 4%;*/
+}
+
+#startAppButton{
+  margin-left: 38%;
+  margin-right: 50%;
+  display: block;
+  border-color: #132B01 !important;
+  box-shadow: 1px 1px 1px;
+}
+
+#startAppButton:hover{
+  background-color: #132B01 !important;
+  color: white !important;
+}
 /*---------------------------------------------------------------------------------
    Header Styles page 1 and page 2
 ---------------------------------------------------------------------------------*/
@@ -107,7 +156,7 @@ a {
 	font-size: 2em;
 	padding: 1.8em;
 	color: #282828;
-	margin-top: -4%;
+	margin-top: -7%;
     margin-bottom: 20px;
     text-shadow: 0.3px 0.3px 0.3px black;
 }
@@ -183,6 +232,15 @@ a {
 /*---------------------------------------------------------------------------------
    Search Section Styles in Page 1
 ---------------------------------------------------------------------------------*/
+.logoImage2{
+  width: 135px;
+  margin: -1%;
+  padding-bottom: 5%;
+}
+
+.mainSection2{
+  margin-top: -6%;
+}
 
 #searchBox {
     resize: none;
@@ -205,9 +263,9 @@ input {
 	display: block;
 	margin: 0.8em auto 0;
 	background-color: #076124 !important;
-	border-color: #076124 !important;
-	opacity: 0.9;
-	color: #fff;
+	border-color: #132B01 !important;
+	/*opacity: 0.9;*/
+	color: #fff !important;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
@@ -219,7 +277,9 @@ input {
 }
 
 input:hover{
-	background-color: #007030 !important;
+	background-color: #132B01 !important;
+  /*opacity: 0.8;*/
+  color: white !important;
 }
 
 .disease{
@@ -227,13 +287,20 @@ input:hover{
     margin-top: 2%;
     box-shadow: 2px 2px 2px grey;
     text-shadow: 0.5px 0.5px 0.3px black;
-    background-color: #076124 !important;
-	border-color: #076124 !important;
+    border-color: #132B01 !important;
+    /*box-shadow: 1px 1px 1px;*/
+    /*background-color: #076124 !important;*/
+	/*border-color: #076124 !important;*/
+}
+
+.disease:hover{
+  background-color: #132B01 !important;
+  color: white !important;
 }
 
 
 .diseaseToggle{
-	background-color: #790D2E !important;
+	background-color: #780101 !important;
 	color:white;
 }
 
@@ -241,7 +308,7 @@ input:hover{
    Results Section Styles in Page 2
 ---------------------------------------------------------------------------------*/
 .navBar{
-	background-color: rgba(40, 113, 99, 0.2);
+	/*background-color: rgba(40, 113, 99, 0.2);*/
 	height: 30%;
 	width: 100%;
 }
@@ -476,9 +543,9 @@ p {
 	margin-bottom: 10px;
 	font-size: 22px;
     box-shadow: 2px 2px 2px #282828;
-    background-color: #076124 !important;
-    border-color: #076124 !important;
-    color: white;
+    /*background-color: #076124 !important;*/
+    /*border-color: #076124 !important;*/
+    color: #282828;
     border-radius: 5px;
 }
 /*---------------------------------------------------------------------------------
@@ -496,6 +563,35 @@ p {
 }
 
 @media (min-width: 0px) and (max-width: 414px){
+
+  .landingPageTitleDiv{
+    top: 20%;
+  }
+
+  #startAppButton{
+    margin-left: 2%;
+  }
+
+  .instructions{
+    font-size: 14px;
+  }
+
+  .subTitles1{
+    font-size: 18px;
+  }
+
+  .subTitles{
+    font-size: 15px;
+  }
+
+  .title{
+    font-size: 2.5em;
+  }
+
+  .logoImage{
+    width: 107px;
+  }
+
 	.logoPage1{
 		display: none;
 	}
@@ -505,7 +601,7 @@ p {
 	}
 
 	.text{
-		margin-top: -13px;
+		margin-top: -7%;
 		font-size: 20px;
 	}
 
@@ -524,7 +620,37 @@ p {
 	}
 }
 
+
 @media (min-width: 415px) and (max-width: 768px){
+
+  .landingPageTitleDiv{
+    top: 22%;
+  }
+
+  #startAppButton{
+    margin-left: 23%;
+  }
+
+  .instructions{
+    font-size: 14px;
+  }
+
+  .subTitles1{
+    font-size: 20px;
+  }
+
+  .subTitles{
+    font-size: 17px;
+  }
+
+  .title{
+    font-size: 2.5em;
+  }
+
+  .logoImage{
+    width: 117px;
+  }
+
 	.searchAgainBtn{
 		margin-left: 38%;
 	}
@@ -535,6 +661,10 @@ p {
 }
 
 @media (min-width: 769px) and (max-width: 991px){
+
+  .landingPageTitleDiv{
+    top: 30%;
+  }
 	.searchAgainBtn{
 		margin-left: 39%;
 	}
