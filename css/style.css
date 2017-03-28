@@ -19,28 +19,26 @@ Common Styles
 }
 
 html {
-	width: 100%;
-	height: 100%;
-	/*background-color: #003621;*/
-  background-color: #282828;
+  width: 100%;
+  height: 100%;
+  background-color: #003621;
 }
 
 body {
-	position: relative;
-	width: 98%;
-	min-height: 97%;
-	margin: 0.8em auto;
-	padding-bottom: 20px;
-	font-family: 'Muli', sans-serif;
-	/*background-image: url("../images/fruitsVeg5.png");*/
-  /*background-color: #F9F9F9;*/
-	text-align: center;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	-webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
-	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  position: relative;
+  width: 98%;
+  min-height: 96%;
+  margin: 0.8em auto;
+  padding-bottom: 20px;
+  font-family: 'Muli', sans-serif;
+  background-image: url("../images/fruitsVeg5.png");
+  text-align: center;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
 }
 
 body { overflow-x: hidden;}
@@ -51,55 +49,7 @@ a {
 }
 
 /*---------------------------------------------------------------------------------
-  Landing Page
----------------------------------------------------------------------------------*/
-.landingPageTitleDiv{
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  height: 30%;
-  width: 50%;
-  margin: -15% 0 0 -25%;
-}
-
-.subTitles{
-  font-size: 20px;
-  text-shadow: 0.3px 0.3px 0.3px;
-}
-
-.subTitles1{
-  margin-top: -3%;
-  font-size: 25px;
-  color: #282828;
-  text-shadow: 0.5px 0.5px 0.9px;
-}
-
-.logoImage{
-  width: 135px;
-  margin: -1%;
-  padding-bottom: 8%;
-}
-
-.instructions{
-  font-size: 17px;
-  text-shadow: 0.3px 0.3px 0.3px;
-  /*padding-top: 4%;*/
-}
-
-#startAppButton{
-  margin-left: 38%;
-  margin-right: 50%;
-  display: block;
-  border-color: #132B01 !important;
-  box-shadow: 1px 1px 1px;
-}
-
-#startAppButton:hover{
-  background-color: #132B01 !important;
-  color: white !important;
-}
-/*---------------------------------------------------------------------------------
-   Header Styles page 1 and page 2
+Header Styles page 1 and page 2
 ---------------------------------------------------------------------------------*/
 
 .nav {
@@ -144,20 +94,20 @@ a {
 }
 
 .title {
-	font-weight: 900;
-	font-size: 4em;
-	color: black;
-	margin-top: 5px;
-	font-family: 'Special Elite', cursive;
-  padding-left: 6%;
+  font-weight: 900;
+  font-size: 4em;
+  color: black;
+  margin-top: 5px;
+  font-family: 'Special Elite', cursive;
+
 }
 
 .text{
-	font-weight: 900;
-	font-size: 2em;
-	padding: 1.8em;
-	color: #282828;
-	margin-top: -7%;
+  font-weight: 900;
+  font-size: 2em;
+  padding: 1.8em;
+  color: #282828;
+  margin-top: -4%;
   margin-bottom: 20px;
   text-shadow: 0.3px 0.3px 0.3px black;
 }
@@ -238,16 +188,6 @@ a {
 /*---------------------------------------------------------------------------------
 Search Section Styles in Page 1
 ---------------------------------------------------------------------------------*/
-.logoImage2{
-  width: 135px;
-  margin: -1%;
-  padding-bottom: 5%;
-}
-
-.mainSection2{
-  margin-top: -6%;
-  padding-left: 7%;
-}
 
 #searchBox {
   resize: none;
@@ -265,60 +205,51 @@ Search Section Styles in Page 1
 }
 
 input {
-	min-width: 50%;
-	height: 70px;
-	display: block;
-	margin: 0.8em auto 0;
-	background-color: #076124 !important;
-	border-color: #132B01 !important;
-	/*opacity: 0.9;*/
-	color: #fff !important;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	font-size: 170% !important;
-	clear: both;
+  min-width: 50%;
+  height: 70px;
+  display: block;
+  margin: 0.8em auto 0;
+  background-color: #076124 !important;
+  border-color: #076124 !important;
+  opacity: 0.9;
+  color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 170% !important;
+  clear: both;
   right: 35%;
   box-shadow: 2px 2px 2px grey;
   text-shadow: 0.5px 0.5px 0.3px black;
 }
 
 input:hover{
-	background-color: #132B01 !important;
-  /*opacity: 0.8;*/
-  color: white !important;
+  background-color: #007030 !important;
 }
 
 .disease{
-    margin-right: 2%;
-    margin-top: 2%;
-    box-shadow: 2px 2px 2px grey;
-    text-shadow: 0.5px 0.5px 0.3px black;
-    border-color: #132B01 !important;
-    margin-left: 2%;
-    /*box-shadow: 1px 1px 1px;*/
-    /*background-color: #076124 !important;*/
-	/*border-color: #076124 !important;*/
-}
-
-.disease:hover{
-  background-color: #132B01 !important;
-  color: white !important;
+  margin-right: 2%;
+  margin-top: 2%;
+  box-shadow: 2px 2px 2px grey;
+  text-shadow: 0.5px 0.5px 0.3px black;
+  background-color: #076124 !important;
+  border-color: #076124 !important;
+  min-width: 170px !important;
 }
 
 
 .diseaseToggle{
-	background-color: #780101 !important;
-	color:white;
+  background-color: #790D2E !important;
+  color:white;
 }
 
 /*---------------------------------------------------------------------------------
 Results Section Styles in Page 2
 ---------------------------------------------------------------------------------*/
 .navBar{
-	/*background-color: rgba(40, 113, 99, 0.2);*/
-	height: 30%;
-	width: 100%;
+  background-color: rgba(40, 113, 99, 0.2);
+  height: 30%;
+  width: 100%;
 }
 
 .searchAgain{
@@ -547,13 +478,13 @@ p {
 }
 
 .searchAgainBtn{
-	margin-left: 29%;
-	margin-bottom: 10px;
-	font-size: 22px;
+  margin-left: 29%;
+  margin-bottom: 10px;
+  font-size: 22px;
   box-shadow: 2px 2px 2px #282828;
-  /*background-color: #076124 !important;*/
-  /*border-color: #076124 !important;*/
-  color: #282828;
+  background-color: #076124 !important;
+  border-color: #076124 !important;
+  color: white;
   border-radius: 5px;
 }
 /*---------------------------------------------------------------------------------
@@ -561,8 +492,8 @@ grid layout tests
 ---------------------------------------------------------------------------------*/
 
 /*==================================================
-            Bootstrap 3 Media Queries            
-
+=            Bootstrap 3 Media Queries             =
+==================================================*/
 
 @media (min-width: 0px) and (max-width: 750px){
   .title{
@@ -571,47 +502,18 @@ grid layout tests
 }
 
 @media (min-width: 0px) and (max-width: 414px){
-
-  .landingPageTitleDiv{
-    top: 20%;
+  .logoPage1{
+    display: none;
   }
-
-  #startAppButton{
-    margin-left: 2%;
-  }
-
-  .instructions{
-    font-size: 14px;
-  }
-
-  .subTitles1{
-    font-size: 18px;
-  }
-
-  .subTitles{
-    font-size: 15px;
-  }
-
-  .title{
-    font-size: 2.5em;
-  }
-
-  .logoImage{
-    width: 107px;
-  }
-
-	.logoPage1{
-		display: none;
-	}
 
   .what{
     float: left;
   }
 
-	.text{
-		margin-top: -7%;
-		font-size: 20px;
-	}
+  .text{
+    margin-top: -13px;
+    font-size: 20px;
+  }
 
   .mainSection{
     margin-left: 14%;
@@ -628,40 +530,10 @@ grid layout tests
   }
 }
 
-
 @media (min-width: 415px) and (max-width: 768px){
-  
-  .landingPageTitleDiv{
-    top: 22%;
+  .searchAgainBtn{
+    margin-left: 38%;
   }
-
-  #startAppButton{
-    margin-left: 23%;
-  }
-
-  .instructions{
-    font-size: 14px;
-  }
-
-  .subTitles1{
-    font-size: 20px;
-  }
-
-  .subTitles{
-    font-size: 17px;
-  }
-
-  .title{
-    font-size: 2.5em;
-  }
-
-  .logoImage{
-    width: 117px;
-  }
-
-	.searchAgainBtn{
-		margin-left: 38%;
-	}
 
   .mainSection{
     margin-left: 7%;
@@ -669,10 +541,7 @@ grid layout tests
 }
 
 @media (min-width: 769px) and (max-width: 991px){
-  .landingPageTitleDiv{
-    top: 32%;
+  .searchAgainBtn{
+    margin-left: 39%;
   }
-	.searchAgainBtn{
-		margin-left: 39%;
-	}
 }

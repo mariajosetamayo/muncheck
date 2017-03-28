@@ -1,8 +1,3 @@
-// Landing Page
-
-var landingPage = $('#landingPage');
-var startAppButton = $("#startAppButton")
-
 // View 1
 var searchFoodBox = $("#searchBox");
 var diseasesBtns = $(".disease");
@@ -110,15 +105,9 @@ function isFoodRecommended(data){
 	return isRecommended;
 };
 
-//////// Event listener for landing page ////////
-
-startAppButton.click(function(){
-	return showCorrectView("page1","page2", "landingPage");
-})
-
 /////// Event listeners for View 1 ////////
 submitFoodQueryBtn.click(function(){
-	return showCorrectView("page2", "page1", "landingPage");
+	return showCorrectView("page2", "page1");
 });
 
 showInstructionsBtn.click(function(){
@@ -159,10 +148,9 @@ searchFoodAgainBtn.click(function(){
 });
 
 /////// DOM manipulation for View 1 and 2 ///////
-function showCorrectView(shown, hidden1, hidden2) {
+function showCorrectView(shown, hidden) {
 	document.getElementById(shown).style.display='block';
-	document.getElementById(hidden1).style.display='none';
-	document.getElementById(hidden2).style.display='none';
+	document.getElementById(hidden).style.display='none';
 	return false;
 };
 
@@ -176,7 +164,7 @@ var showError = function(error){
 };
 
 function showNutritionalValue(data){
-	foodItemNameContainer.val("");
+  	foodItemNameContainer.val("");
 	foodPhoto.attr('src', data.foods[0].photo.thumb);
 	foodItemNameContainer.text("Micronutrients in:" + " " + data.foods[0].food_name);
 
@@ -219,5 +207,5 @@ function showRecomendation(isRecommended){
 };
 
 $(document).ready(function(){
-	showCorrectView("landingPage","page1", "page2");
+	showCorrectView("page1", "page2");
 });

@@ -1,36 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Muncheck</title>
-	<link rel="icon" type="image/png" href="./images/appleLogo2.png">
-	<!-- Meta Tags -->
-	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/style.css"/>
-	<link href="https://fonts.googleapis.com/css?family=Special+Elite"rel="stylesheet" type='text/css'>
-	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-</head>
-<body>
-	<div id="landingPage">
-		<div class="row">
-			<div class="col-xs-10 col-sm-10 col-md-11 col-lg-11 text-center landingPageTitleDiv">
-				<h1 class="title">Muncheck<img class="logoImage" src="./images/appleLogo2.png" /> </h1>
-				<h3 class="subTitles subTitles1"> Are you craving a food but are not sure if you should eat it? </h3>
-				<h3 class="subTitles">Muncheck can help you decide in three simple steps:</h3>
-				</br>
-				<p class="instructions">1. Search for a food.</p>
-				</br>
-				<p class="instructions">2. Choose if you have any conditions (diabetes, kidney disease, or want to loose weight).</p>
-				</br>
-				<p class="instructions">3. Get a recommendation!</p>
-				</br>
-				<button id="startAppButton" class="btn btn-lg btn-default">Search now!</button>
-			</div>
-		</div>
-	</div>
-	<div id="page1">
+	<head>
+		<title>Muncheck</title>
+		<!-- Meta Tags -->
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Special+Elite"rel="stylesheet" type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+	</head>
+	<body>
+		<div id="page1">
+
 			<div class="container-fullwidth navBar">
 				<div class="row">
 					<div class="col-xs-4 col-sm-10 col-md-12 col-lg-12"></div>
@@ -66,28 +49,30 @@
 					</div>
 				</div>
 			</div>
-		<div class="container mainSection">
-			<div class="row">
-				<div class="col-xs-10 col-sm-10 col-md-11 col-lg-11 text-center mainSection2">
 
-					<!-- logo text -->
-					<div class="logoTitle">
-						<h1 class="title">Muncheck<img class="logoImage2" src="./images/appleLogo2.png" /></h1>
-						<p class="text">What do you want to eat?</p>
+			<div class="container mainSection">
+				<div class="row">
+					<div class="col-xs-10 col-sm-10 col-md-11 col-lg-11 text-center">
+
+						<!-- logo text -->
+						<div class="logoTitle">
+							<h1 class="title">Muncheck</h1>
+							<p class="text">What do you want to eat?</p>
+						</div>
+						<section class="searchSection"> <!-- Search Section -->
+
+							<form>
+								<textarea id="searchBox" value="Clear" placeholder="Type the name of a food item here. Ex. 1 apple" rows="4" cols="40" required></textarea>
+								<br/>
+								<button class="disease btn btn-md btn-success" value="yesDiabetes" id="hasDiabetes">I have diabetes</button>
+								<button class="disease btn btn-md btn-success" value="yesKidney" id="hasKidneyDisease">I have kidney disease</button>
+								<button class="disease btn btn-md btn-success" value="yesWeight" id="wantsToLoseWeight">I want to lose weight</button>
+								<br/>
+
+							</form>
+							<input type="submit" class="btn btn-xl btn-success" value="Check food item" id="submitBtn"/>
+						</section>
 					</div>
-					<section class="searchSection"> <!-- Search Section -->
-
-						<form>
-							<textarea id="searchBox" value="Clear" placeholder="Type the name of a food item here. Ex. 1 apple" rows="4" cols="40" required></textarea>
-							<br/>
-							<button class="disease btn btn-md btn-default" value="yesDiabetes" id="hasDiabetes">I have diabetes</button>
-							<button class="disease btn btn-md btn-default" value="yesKidney" id="hasKidneyDisease">I have kidney disease</button>
-							<button class="disease btn btn-md btn-default" value="yesWeight" id="wantsToLoseWeight">I want to lose weight</button>
-							<br/>
-
-						</form>
-						<input type="submit" class="btn btn-xl btn-default" value="Check food item" id="submitBtn"/>
-					</section>
 				</div>
 			</div>
 
@@ -110,6 +95,7 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="container">
 				<div class="resultsContainer">
 					<div class="row">
@@ -229,7 +215,6 @@
 							</div>
 							<button class="searchAgain searchAgainBtn btn btn-md btn-success">Search again</button>
 						</div>
-						<button class="searchAgain searchAgainBtn btn btn-md btn-default">Search again</button>
 					</div>
 				</div>
 			</div>
