@@ -1,21 +1,21 @@
 /*---------------------------------------------------------------------------------
-   Common Styles
+Common Styles
 ---------------------------------------------------------------------------------*/
 
 .clearfix:before,
 .clearfix:after {
-    content: " ";  1
-    display: table;  2
+  content: " ";  1
+  display: table;  2
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 * {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -46,8 +46,8 @@ body {
 body { overflow-x: hidden;}
 
 a {
-	text-decoration: none;
-	color: black;
+  text-decoration: none;
+  color: black;
 }
 
 /*---------------------------------------------------------------------------------
@@ -103,44 +103,44 @@ a {
 ---------------------------------------------------------------------------------*/
 
 .nav {
-	position: relative;
-	height: 10%;
-	padding: 1em;
+  position: relative;
+  height: 10%;
+  padding: 1em;
 }
 
 .logo, .what {
-	font-weight: 700;
-	font-size: 1.8em;
-	margin-right: 8%;
+  font-weight: 700;
+  font-size: 1.8em;
+  margin-right: 8%;
 }
 
 .logo {
-	float: left;
-	list-style: none;
-	margin-left: -1%;
-	margin: auto;
-	font-family: 'Special Elite', sans-serif;
+  float: left;
+  list-style: none;
+  margin-left: -1%;
+  margin: auto;
+  font-family: 'Special Elite', sans-serif;
 }
 
 .what {
-	float: right;
-	list-style: none;
-	color: #282828;
-    text-shadow: 0.3px 0.3px 0.3px black;
+  float: right;
+  list-style: none;
+  color: #282828;
+  text-shadow: 0.3px 0.3px 0.3px black;
 }
 
 .nav a {
-	text-decoration: none;
-	color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .nav a:hover{
-	color: #007030;
-	text-decoration: none;
+  color: #007030;
+  text-decoration: none;
 }
 
 .logoTitle{
-	margin-top: 15%;
+  margin-top: 15%;
 }
 
 .title {
@@ -158,80 +158,85 @@ a {
 	padding: 1.8em;
 	color: #282828;
 	margin-top: -7%;
-    margin-bottom: 20px;
-    text-shadow: 0.3px 0.3px 0.3px black;
+  margin-bottom: 20px;
+  text-shadow: 0.3px 0.3px 0.3px black;
 }
 
 /* Styles for hidden modal */
 .overlay {
-	width: 100%;
-	height: 100%;
-	color: black;
-	background: rgba(89, 154, 61, 0.9);
-	position: absolute;
-	top: 0;
-	left: 0;
-	margin: 0;
-	z-index: 1000;
-	display: none;
+  width: 100%;
+  height: 100%;
+  color: black;
+  background:linear-gradient(#003621,#005F24,#003621);
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 1000;
+  display: none;
 }
 
 .information {
-	color: #404040;
-	background: #7EBE44;
-	position: relative;
-	height: auto;
-	width: 90%;
-	border-radius: 3px;
-	top: 15%;
-	margin: auto auto;
-	border: 1px solid rgba(0,0,0,0.1);
-	padding: 10px;
+  color: #404040;
+  background: #7EBE44;
+  position: relative;
+  height: auto;
+  width: 90%;
+  border-radius: 3px;
+  top: 15%;
+  margin: auto auto;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 10px;
 }
 
 .informationH3 {
-	margin: 0;
-	padding: 0.4em;
-	text-align: center;
-	font-size: 200%;
-	font-weight: 400;
-	opacity: 0.8;
-	background: rgba(0,0,0,0.1);
-	border-radius: 3px 3px 0 0;
-	color: white;
+  margin: 0;
+  padding: 0.4em;
+  text-align: center;
+  font-size: 200%;
+  font-weight: 400;
+  opacity: 0.8;
+  background: rgba(0,0,0,0.1);
+  border-radius: 3px 3px 0 0;
+  color: white;
+  text-shadow: 2px 2px 2px #282828;
 }
 
 .informationP {
-	margin: 0;
-	padding: 10px 0;
-	line-height: 2em;
-	text-align: justify;
+  margin: 0;
+  padding: 10px 0;
+  line-height: 2em;
+  text-align: justify;
+  font-size: 18px;
+  word-spacing: -2px;
 }
 
 .informationUl {
-	margin-bottom: -30px;
-	padding: 0 0 30px 20px;
-	text-align: left;
+  margin-bottom: -30px;
+  padding: 0 0 30px 20px;
+  text-align: left;
+  font-size: 15px;
 }
 
 .informationLi {
-	padding: 5px 0;
-	display: block;
-	list-style-type: disc;
-	line-height: 1.5em;
+  padding: 5px 0;
+  display: block;
+  list-style-type: disc;
+  line-height: 1.5em;
+  font-size: 15px;
 }
 
 .informationGotIt {
-	font-size: 1.5em;
-	background: #F0F7DA;
-	color: #95a5a6;
-	padding: 0.5em 2em;
-	margin-bottom: 50px;
-	border-radius: 3px;
+  font-size: 1.5em;
+  background: #F0F7DA;
+  color: #95a5a6;
+  padding: 0.5em 2em;
+  margin-bottom: 50px;
+  border-radius: 3px;
 }
 
 /*---------------------------------------------------------------------------------
-   Search Section Styles in Page 1
+Search Section Styles in Page 1
 ---------------------------------------------------------------------------------*/
 .logoImage2{
   width: 135px;
@@ -245,18 +250,18 @@ a {
 }
 
 #searchBox {
-    resize: none;
-    margin-top: -60px;
-    font-size: 18px;
-    border-radius: 4px;
-    border: solid #F1F1F1;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
-    overflow: auto;
-    width: 60%;
-    border: 2px solid #586352;
-    box-shadow: 2px 2px 2px grey;
-    text-align: center;
-    padding-top: 7%;
+  resize: none;
+  margin-top: -60px;
+  font-size: 18px;
+  border-radius: 4px;
+  border: solid #F1F1F1;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  overflow: auto;
+  width: 60%;
+  border: 2px solid #586352;
+  box-shadow: 2px 2px 2px grey;
+  text-align: center;
+  padding-top: 7%;
 }
 
 input {
@@ -273,9 +278,9 @@ input {
 	border-radius: 4px;
 	font-size: 170% !important;
 	clear: both;
-    right: 35%;
-    box-shadow: 2px 2px 2px grey;
-    text-shadow: 0.5px 0.5px 0.3px black;
+  right: 35%;
+  box-shadow: 2px 2px 2px grey;
+  text-shadow: 0.5px 0.5px 0.3px black;
 }
 
 input:hover{
@@ -308,7 +313,7 @@ input:hover{
 }
 
 /*---------------------------------------------------------------------------------
-   Results Section Styles in Page 2
+Results Section Styles in Page 2
 ---------------------------------------------------------------------------------*/
 .navBar{
 	/*background-color: rgba(40, 113, 99, 0.2);*/
@@ -317,101 +322,101 @@ input:hover{
 }
 
 .searchAgain{
-	font-size: 30px;
-	margin: auto;
-	float: left;
+  font-size: 30px;
+  margin: auto;
+  float: left;
 }
 
 #page1 {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 #page2{
-	display: none;
+  display: none;
 }
 
 .resultsContainer{
-	background-color: #F1F1F1;
-    min-height: 665px;
-    margin-top: 33px;
-    border-radius: 2px;
+  background-color: #F1F1F1;
+  min-height: 665px;
+  margin-top: 33px;
+  border-radius: 2px;
 }
 
 .recommendedContainer{
-	background: linear-gradient(#003923, #22663F, #003923);
-	border-radius: 2px;
-	box-shadow: 3px 3px 3px grey;
+  background: linear-gradient(#003923, #22663F, #003923);
+  border-radius: 2px;
+  box-shadow: 3px 3px 3px grey;
 }
 
 .notRecommendedContainer{
-	background: linear-gradient(#5A2623,#A02025,#5A2623);
-	border-radius: 2px;
-	box-shadow: 3px 3px 3px grey;
+  background: linear-gradient(#5A2623,#A02025,#5A2623);
+  border-radius: 2px;
+  box-shadow: 3px 3px 3px grey;
 }
 
 .notFoundContainer{
-	background-color: rgba(163, 5, 5, .8);
-	border-radius: 2px;
-	padding-left: 5%;
+  background-color: rgba(163, 5, 5, .8);
+  border-radius: 2px;
+  padding-left: 5%;
 }
 
 .notFoundContainer #results, .notFoundContainer .foodItem, .notFoundContainer .micronutrients, .notFoundContainer .infoTag{
-	display:none;
+  display:none;
 }
 
 .resultsBox{
-	margin: 30px auto;
-  	height: 150px;
+  margin: 30px auto;
+  height: 150px;
 }
 
 .reccomendation{
-	font-size: 50px;
-	color: red;
-	text-shadow: 1px 1px #ff0000;
+  font-size: 50px;
+  color: red;
+  text-shadow: 1px 1px #ff0000;
 }
 
 #results img{
-	height: 100%;
-	border-radius: 2px;
-	box-shadow: 2px 2px 2px #282828;
+  height: 100%;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px #282828;
 }
 
 .micronutrientsInfo{
-	margin-top: -1%;
+  margin-top: -1%;
 }
 
 #results2{
-	color: white;
-	padding-top:10%;
-	text-shadow: 2px 2px 2px #282828;
+  color: white;
+  padding-top:10%;
+  text-shadow: 2px 2px 2px #282828;
 }
 
 .micronutrients{
-	margin:20px;
-	height: 100px;
-	background-color: white;
-	min-width: 55%;
-	border-radius: 2px;
-	box-shadow: 2px 2px 2px #282828;
+  margin:20px;
+  height: 100px;
+  background-color: white;
+  min-width: 55%;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px #282828;
 }
 
 .foodItem{
-	font-size: 150%;
-	height: 25px;
-	color: white;
-	text-shadow: 2px 2px 2px #282828;
+  font-size: 150%;
+  height: 25px;
+  color: white;
+  text-shadow: 2px 2px 2px #282828;
 }
 
 .micronutrients{
-	margin-top: 25px;
-	font-size: 20px;
-	overflow: scroll;
-	height:214px;
-	padding: 10px;
+  margin-top: 25px;
+  font-size: 20px;
+  overflow: scroll;
+  height:214px;
+  padding: 10px;
 }
 
 .foodItem p{
-	padding-top: 21px;
+  padding-top: 21px;
 }
 
 .infoTag{
@@ -425,7 +430,7 @@ input:hover{
 
 
 li{
-	list-style: none;
+  list-style: none;
 }
 
 /*table styling*/
@@ -545,24 +550,24 @@ p {
 	margin-left: 29%;
 	margin-bottom: 10px;
 	font-size: 22px;
-    box-shadow: 2px 2px 2px #282828;
-    /*background-color: #076124 !important;*/
-    /*border-color: #076124 !important;*/
-    color: #282828;
-    border-radius: 5px;
+  box-shadow: 2px 2px 2px #282828;
+  /*background-color: #076124 !important;*/
+  /*border-color: #076124 !important;*/
+  color: #282828;
+  border-radius: 5px;
 }
 /*---------------------------------------------------------------------------------
-   grid layout tests
+grid layout tests
 ---------------------------------------------------------------------------------*/
 
 /*==================================================
-=            Bootstrap 3 Media Queries             =
-==================================================*/
+            Bootstrap 3 Media Queries            
+
 
 @media (min-width: 0px) and (max-width: 750px){
-	.title{
-		font-size: 3em;
-	}
+  .title{
+    font-size: 3em;
+  }
 }
 
 @media (min-width: 0px) and (max-width: 414px){
@@ -599,33 +604,33 @@ p {
 		display: none;
 	}
 
-	.what{
-		float: left;
-	}
+  .what{
+    float: left;
+  }
 
 	.text{
 		margin-top: -7%;
 		font-size: 20px;
 	}
 
-	.mainSection{
-		margin-left: 14%;
-	}
+  .mainSection{
+    margin-left: 14%;
+  }
 
-	#searchBox{
-		margin-top: -45px;
-		font-size: 14px;
-		width: 90%;
-	}
+  #searchBox{
+    margin-top: -45px;
+    font-size: 14px;
+    width: 90%;
+  }
 
-	.searchAgainBtn{
-		margin-left: 22%;
-	}
+  .searchAgainBtn{
+    margin-left: 22%;
+  }
 }
 
 
 @media (min-width: 415px) and (max-width: 768px){
-
+  
   .landingPageTitleDiv{
     top: 22%;
   }
@@ -658,13 +663,12 @@ p {
 		margin-left: 38%;
 	}
 
-	.mainSection{
-		margin-left: 7%;
-	}
+  .mainSection{
+    margin-left: 7%;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 991px){
-
   .landingPageTitleDiv{
     top: 32%;
   }
