@@ -21,7 +21,8 @@
 html {
 	width: 100%;
 	height: 100%;
-	background-color: #003621;
+	/*background-color: #003621;*/
+  background-color: #282828;
 }
 
 body {
@@ -54,7 +55,7 @@ a {
 ---------------------------------------------------------------------------------*/
 .landingPageTitleDiv{
   position: absolute;
-  top: 37%;
+  top: 40%;
   left: 50%;
   height: 30%;
   width: 50%;
@@ -63,7 +64,7 @@ a {
 
 .subTitles{
   font-size: 20px;
-  text-shadow: 0.5px 0.5px 0.5px;
+  text-shadow: 0.3px 0.3px 0.3px;
 }
 
 .subTitles1{
@@ -148,7 +149,7 @@ a {
 	color: black;
 	margin-top: 5px;
 	font-family: 'Special Elite', cursive;
-
+  padding-left: 6%;
 }
 
 .text{
@@ -240,6 +241,7 @@ a {
 
 .mainSection2{
   margin-top: -6%;
+  padding-left: 7%;
 }
 
 #searchBox {
@@ -288,6 +290,7 @@ input:hover{
     box-shadow: 2px 2px 2px grey;
     text-shadow: 0.5px 0.5px 0.3px black;
     border-color: #132B01 !important;
+    margin-left: 2%;
     /*box-shadow: 1px 1px 1px;*/
     /*background-color: #076124 !important;*/
 	/*border-color: #076124 !important;*/
@@ -663,7 +666,7 @@ p {
 @media (min-width: 769px) and (max-width: 991px){
 
   .landingPageTitleDiv{
-    top: 30%;
+    top: 32%;
   }
 	.searchAgainBtn{
 		margin-left: 39%;
