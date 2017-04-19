@@ -8,30 +8,31 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Special+Elite"rel="stylesheet" type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 </head>
 <body>
 	<div id="landingPage">
-		<div class="row">
-			<div class="col-xs-10 col-sm-10 col-md-11 col-lg-11 text-center landingPageTitleDiv">
-				<h1 class="title">Muncheck<img class="logoImage" src="./images/appleLogo2.png" /> </h1>
-				<h3 class="subTitles subTitles1"> Are you craving a food but are not sure if you should eat it? </h3>
-				<h3 class="subTitles">Muncheck can help you decide in three simple steps:</h3>
+		<div class="text-center landingPageTitleDiv">
+			<h1 class="title">Muncheck<img class="logoImage" src="./images/appleLogo2.png" /> </h1>
+			<h3 class="subTitles subTitles1"> Are you craving a snack but are not sure if you should eat it? </h3>
+			<h3 class="subTitles">Muncheck can help you decide in three simple steps:</h3>
+			<div class="instructionsDiv">
+				<p><span class = "fa-stack instructions"><i class ="fa fa-circle-o fa-stack-2x"></i><strong class = "fa-stack-1x">1</strong></span><span class="instructions instructionsParagraph">Search for a food.</span></p>
 				</br>
-				<p class="instructions">1. Search for a food.</p>
+				<p><span class = "fa-stack instructions"><i class ="fa fa-circle-o fa-stack-2x"></i><strong class = "fa-stack-1x">2</strong></span><span class="instructions instructionsParagraph">Choose if you have any conditions (diabetes, kidney disease, or want to loose weight).</span></p>
 				</br>
-				<p class="instructions">2. Choose if you have any conditions (diabetes, kidney disease, or want to loose weight).</p>
-				</br>
-				<p class="instructions">3. Get a recommendation!</p>
-				</br>
+				<p><span class = "fa-stack instructions"><i class ="fa fa-circle-o fa-stack-2x"></i><strong class = "fa-stack-1x">3</strong></span><span class="instructions instructionsParagraph">Get a recommendation!</span></p>
+			</div>
+			</br>		
+			<div class="startAppButton">
 				<button id="startAppButton" class="btn btn-lg btn-default">Search now!</button>
 			</div>
 		</div>
 	</div>
 	<div id="page1">
-
 		<div class="container-fullwidth navBar">
 			<div class="row">
 				<div class="col-xs-4 col-sm-10 col-md-12 col-lg-12"></div>
@@ -44,7 +45,6 @@
 				</nav>
 			</div>
 		</div>
-
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>
@@ -69,29 +69,25 @@
 		</div>
 
 		<div class="container mainSection">
-			<div class="row">
-				<div class="col-xs-10 col-sm-10 col-md-11 col-lg-11 text-center mainSection2">
+			<div class="text-center mainSection2">
 
-					<!-- logo text -->
-					<div class="logoTitle">
-						<h1 class="title">Muncheck<img class="logoImage2" src="./images/appleLogo2.png" /></h1>
-						<p class="text">What do you want to eat?</p>
-					</div>
-					<section class="searchSection"> <!-- Search Section -->
-
-						<form>
-							<textarea id="searchBox" value="Clear" placeholder="Type the name of a food item here. Ex. 1 apple" rows="4" cols="40" required></textarea>
-							<br/>
-							<button class="disease btn btn-md btn-default" value="yesDiabetes" id="hasDiabetes">I have diabetes</button>
-							<button class="disease btn btn-md btn-default" value="yesKidney" id="hasKidneyDisease">I have kidney disease</button>
-							<button class="disease btn btn-md btn-default" value="yesWeight" id="wantsToLoseWeight">I want to lose weight</button>
-							<br/>
-
-						</form>
-						<input type="submit" class="btn btn-xl btn-default" value="Check food item" id="submitBtn"/>
-					</section>
+				<!-- logo text -->
+				<div class="logoTitle">
+					<h1 class="title">Muncheck<img class="logoImage2" src="./images/appleLogo2.png" /></h1>
+					<p class="text">What do you want to eat?</p>
 				</div>
-			</div>
+				<section class="searchSection"> <!-- Search Section -->
+					<form>
+						<textarea id="searchBox" value="Clear" placeholder="Type the name of a food item here. Ex. 1 apple" rows="4" cols="40" required></textarea>
+						<br/>
+						<a class="disease btn btn-md btn-default" value="yesDiabetes" id="hasDiabetes">I have diabetes</a>
+						<a class="disease btn btn-md btn-default" value="yesKidney" id="hasKidneyDisease">I have kidney disease</a>
+						<a class="disease btn btn-md btn-default" value="yesWeight" id="wantsToLoseWeight">I want to lose weight</a>
+						<br/>
+					</form>
+					<input type="submit" class="btn btn-xl btn-default" value="Check food item" id="submitBtn"/>
+				</section>
+			</div>		
 		</div>
 
 	</div> <!-- / View 1 -->
