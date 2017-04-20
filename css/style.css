@@ -123,8 +123,6 @@ Header Styles page 1 and page 2
 .what {
   float: right;
   list-style: none;
-  /*color: white !important;*/
-  /*text-shadow: 0.3px 0.3px 0.3px black;*/
 }
 
 .nav a {
@@ -592,6 +590,10 @@ grid layout tests
 
   .landingPageTitleDiv{
     top: 20%;
+  }
+
+  .logoImage2{
+    width: 63px;
   }
 
   .instructions{
