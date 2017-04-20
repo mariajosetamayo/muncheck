@@ -195,6 +195,19 @@ a {
   color: #282828;
 }
 
+.information {
+	color: #404040;
+	background: #FFFFFF;
+	position: relative;
+	height: auto;
+	width: 90%;
+	border-radius: 3px;
+	top: 15%;
+	margin: auto auto;
+	border: 1px solid rgba(0,0,0,0.1);
+	padding: 10px;
+}
+
 .informationP {
   font-size: 18px;
   margin: 0;
@@ -343,7 +356,7 @@ input:hover{
 .resultsContainer{
 	background-color: #F1F1F1;
     min-height: 665px;
-    margin-top: 33px;
+    margin-top: 9px;
     border-radius: 2px;
 }
 
