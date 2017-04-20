@@ -122,7 +122,7 @@ submitFoodQueryBtn.click(function(){
 });
 
 showInstructionsBtn.click(function(){
-	instructionsOverlay.fadeIn(1000);
+	instructionsOverlay.fadeIn(900);
 });
 
 closeOverlayBtn.click(function(){
