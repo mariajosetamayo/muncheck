@@ -39,6 +39,27 @@ a {
 /*---------------------------------------------------------------------------------
 Landing Page
 ---------------------------------------------------------------------------------*/
+.gallery-size{
+  width:100%;
+}
+
+.gallery {
+     position: relative;
+		 padding: 0;
+	  	margin: 0;
+		text-align: center;
+	}
+
+.gallery-text {
+  position: absolute;
+  top: 50%;
+  left: 73%;
+  height: 30%;
+  width: 50%;
+  margin: -15% 0 0 -25%;
+}
+
+
 .landingPageTitleDiv{
   position: absolute;
   top: 40%;
@@ -49,12 +70,11 @@ Landing Page
 }
 
 .subTitles{
-  font-size: 20px;
+  font-size: 22px;
   text-shadow: 0.3px 0.3px 0.3px;
 }
 
 .subTitles1{
-  margin-top: -3%;
   font-size: 25px;
   color: #282828;
   text-shadow: 0.5px 0.5px 0.9px;
@@ -62,12 +82,11 @@ Landing Page
 
 .logoImage{
   width: 135px;
-  /*margin: -1%;*/
   padding-bottom: 8%;
 }
 
 .instructions{
-  font-size: 17px;
+  font-size: 20px;
   text-shadow: 0.3px 0.3px 0.3px;
   /*padding-top: 4%;*/
 }
@@ -588,6 +607,15 @@ grid layout tests
 
 @media (min-width: 0px) and (max-width: 414px){
 
+  .gallery-text{
+    position: absolute;
+    top: 126%;
+    left: 50%;
+    height: 30%;
+    width: 50%;
+    margin: -15% 0 0 -25%;
+  }
+
   .landingPageTitleDiv{
     top: 20%;
   }
@@ -605,7 +633,7 @@ grid layout tests
   }
 
   .subTitles{
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .title{
@@ -646,6 +674,15 @@ grid layout tests
 
 
 @media (min-width: 415px) and (max-width: 768px){
+
+  .gallery-text{
+    position: absolute;
+    top: 126%;
+    left: 50%;
+    height: 30%;
+    width: 50%;
+    margin: -15% 0 0 -25%;
+  }
 
   .landingPageTitleDiv{
     top: 22%;
@@ -688,4 +725,22 @@ grid layout tests
   .searchAgainBtn{
     margin-left: 39%;
   }
+}
+
+@media (min-width: 769px) and (max-width: 1119px){
+
+  .gallery-size {
+    width: 100%;
+    height: 896px;
+  }
+
+}
+
+@media (min-width: 1200px) and (max-width: 1600px){
+
+  .gallery-size {
+    width: 100%;
+    height: 1000px;
+  }
+
 }
