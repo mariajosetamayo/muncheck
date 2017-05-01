@@ -154,8 +154,8 @@ searchFoodAgainBtn.click(function(){
 	searchFoodBox.val("");
 	userPrefs[window.selectedDisease] =  false;
 	diseasesBtns.removeClass("diseaseToggle");
-	resultsContainer .removeClass("notFoundContainer");
-	return showCorrectView("page1", "page2");
+	resultsContainer.removeClass("notFoundContainer");
+	return showCorrectView("page1", "page2", "landingPage");
 });
 
 /////// DOM manipulation for View 1 and 2 ///////
