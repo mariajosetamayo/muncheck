@@ -12,7 +12,7 @@ Use this app to check the COMPLETE (I don't just mean fat, sugar, and other usua
 
 https://mariajosetamayo.github.io/muncheck/
 
-##Technology used
+## Technology used
 
 - Vanilla Javascript.
 - Libraries: jQuery and Bootstrap.
