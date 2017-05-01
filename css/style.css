@@ -44,11 +44,11 @@ Landing Page
 }
 
 .gallery {
-     position: relative;
-		 padding: 0;
-	  	margin: 0;
-		text-align: center;
-	}
+  position: relative;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
 
 .gallery-text {
   position: absolute;
