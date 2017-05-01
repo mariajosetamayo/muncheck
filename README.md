@@ -8,7 +8,7 @@ Use this app to check the COMPLETE (I don't just mean fat, sugar, and other usua
 
 <img src="https://cloud.githubusercontent.com/assets/16930791/25595591/81b8e7f8-2e82-11e7-8e4f-f4993976773d.jpg" width="420" /> <img src="https://cloud.githubusercontent.com/assets/16930791/25595606/925f600a-2e82-11e7-943a-6fc32eb74ee2.jpg" width="400" height="240" />
 
-### Live view ###
+## Live view ##
 
 https://mariajosetamayo.github.io/muncheck/
 
