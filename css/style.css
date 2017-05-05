@@ -97,6 +97,10 @@ Landing Page
   padding-top: 2%;
 }
 
+.startAppButton{
+  padding-bottom: 10%;
+}
+
 #startAppButton{
   margin: 0 auto;
   display: block;
@@ -166,7 +170,7 @@ Header Styles page 1 and page 2
   font-size: 2em;
   padding: 1.8em;
   color: #282828;
-  margin-top: -7%;
+  margin-top: -6%;
   margin-bottom: 20px;
   text-shadow: 0.3px 0.3px 0.3px black;
 }
@@ -268,7 +272,7 @@ Search Section Styles in Page 1
 .logoImage2{
   width: 135px;
   margin: -1%;
-  padding-bottom: 5%;
+  padding-bottom: 4%;
   vertical-align: middle;
 }
 
@@ -359,6 +363,7 @@ Results Section Styles in Page 2
 
 #page1 {
   max-width: 100%;
+  overflow: hidden;
 }
 
 #page2{
@@ -645,11 +650,6 @@ grid layout tests
     float: left;
   }
 
-  .text{
-    margin-top: -7%;
-    font-size: 20px;
-  }
-
   .mainSection{
     margin-left: 14%;
   }
@@ -694,7 +694,7 @@ grid layout tests
   }
 
   .title{
-    font-size: 2.5em;
+    font-size: 3.0em;
   }
 
   .logoImage{
