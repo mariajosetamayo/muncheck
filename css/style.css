@@ -51,8 +51,12 @@ Landing Page
   margin: 0 auto;
   border-radius: 50%;
   overflow: hidden;
-  width: 45%;
-  height: auto;
+  width: 400px;
+  height: 400px;
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/cupcakeFull2.jpg);
 }
 
 .gallery-text {
@@ -597,7 +601,8 @@ grid layout tests
 @media (min-width: 0px) and (max-width: 414px){
 
   .gallery-image{
-    width: 75%;
+    width: 300px;
+    height: 300px;
   }
 
   .instructionsDiv{
@@ -655,7 +660,10 @@ grid layout tests
   }
 
   .searchAgainBtn{
-    margin-left: 22%;
+    /*margin-left: 22%;*/
+  }
+  .searchAgainButtonDiv{
+    margin: 0 auto;
   }
 }
 
@@ -663,7 +671,8 @@ grid layout tests
 @media (min-width: 415px) and (max-width: 768px){
 
   .gallery-image{
-    width: 75%;
+    width: 300px;
+    height: 300px;
   }
 
   .landingPageTitleDiv{
